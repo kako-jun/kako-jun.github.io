@@ -1,0 +1,46 @@
+
+
+;メニューボタン非表示
+;[hidemenubutton]
+
+
+;ゲームに必要なライブラリ読み込み
+[call storage="system/tyrano.ks"]
+[call storage="system/builder.ks"]
+[call storage="system/chara_define.ks"]
+
+;live2D対応
+
+
+[layopt layer=2 visible=true]
+[layopt layer="message0" visible=false]
+[call storage="system/message_window.ks"]
+
+;プラグインの設定
+[call storage="system/plugin.ks"]
+
+;ユーザー設定
+[call storage="sub.ks"]
+
+[iscript]
+$(".chara_name_area").css("text-align", "center");
+$(".chara_name_area").css("width", "245px");
+
+
+[endscript]
+
+
+
+;タイトルの設定
+;[title name="now loading"]
+
+;タイトル画面表示
+[jump storage="title_screen.ks"]
+
+;--------------------------
+
+[s]
+
+
+
+
