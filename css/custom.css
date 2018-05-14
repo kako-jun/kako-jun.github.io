@@ -8,6 +8,11 @@ a {
   text-decoration: none;
 }
 
+a:hover,
+a:focus {
+  color: rgb(160, 230, 255);
+}
+
 img {
   vertical-align: middle;
 }
@@ -71,11 +76,11 @@ input[type="button"].button-primary:focus {
 }
 
 
-#hero {
-  background-image: url('../images/values-bg.jpg');
+#title {
+  background-image: url('../images/background_first.jpg');
   background-size: cover;
-  color: #fff;
-  padding-bottom: 5rem;
+  color: #f8f8f8;
+  padding-bottom: 7rem;
 }
 
 .download {
@@ -83,29 +88,30 @@ input[type="button"].button-primary:focus {
   text-align: center;
 }
 
-.phones {
-  position: relative;
-}
 .phone {
   position: relative;
   max-width: 80%;
   margin: 3rem auto -12rem;
 }
-.phone + .phone {
-  display: none;
-}
 
 #screenshots {
-  background-image: url('../images/values-bg.jpg');
+  background-image: url('../images/background_second.jpg');
   background-size: cover;
-  color: #fff;
+  color: #f8f8f8;
 }
+
+#screenshots .section-heading { 
+  margin-bottom: 2rem;
+}
+
 #screenshots .section-description { 
   margin-bottom: 4rem;
 }
 
-#screenshots img {
-  margin: 4px 0;
+.screenshot {
+  margin: 8px 0;
+  /* box-shadow: 4px 4px rgb(116, 110, 0); */
+  box-shadow: 4px 4px #FFF200;
 }
 
 #howto {
@@ -170,12 +176,13 @@ input[type="button"].button-primary:focus {
   padding: 0;
 }
 
-#categories {
+#spec {
   background-image: url('../images/background_gray.jpg');
   background-size: cover;
-  color: #fff;
+  color: #f8f8f8;
 }
-#categories .section-description { 
+
+#spec .section-description { 
   margin-bottom: 4rem;
 }
 
@@ -197,21 +204,13 @@ input[type="button"].button-primary:focus {
 }
 
 #contacts {
-  background-image: url('../images/values-bg.jpg');
+  background-image: url('../images/background_last.jpg');
   background-size: cover;
-  color: #fff;
-  padding-bottom: 5rem;
+  color: #f8f8f8;
 }
-.value-multiplier {
-  margin-bottom: .5rem;
-  color: #11DFC7;
-}
-.value-heading {
-  margin-bottom: .3rem;
-}
-.value-description {
-  opacity: .8;
-  font-weight: 300;
+
+#contacts .section-description { 
+  margin-bottom: 4rem;
 }
 
 .contact {
@@ -219,23 +218,42 @@ input[type="button"].button-primary:focus {
 }
 
 .contact img {
-  margin: 4px 0;
+  margin: 10px 0;
 }
 
-.value-heading a {
+.contact-heading {
+  margin-bottom: 3rem;
+}
+
+.contact-heading a {
   color: #FFF200;
 }
 
-.value-heading a:hover,
-.value-heading a:focus
+.contact-heading a:hover,
+.contact-heading a:focus
  {
   color: white;
+}
+
+.contact-description {
+  opacity: .8;
+  font-weight: 300;
 }
 
 #back-to-top {
   background: black;
 }
 
+#back-to-top a
+ {
+  opacity: .8;
+}
+
+#back-to-top a:hover,
+#back-to-top a:focus
+ {
+  opacity: 1;
+}
 
 /* Bigger than 550 */
 @media (min-width: 550px) {
@@ -251,12 +269,12 @@ input[type="button"].button-primary:focus {
   .second-section {
     padding: 18rem 0 11rem;
   }
-  #hero {
+  #title {
     /* padding-bottom: 12rem;
     text-align: left; */
     height: 165px;
   }
-  .hero-heading {
+  .title-heading {
     font-size: 2.4rem;
   }
   .phone {
@@ -284,11 +302,11 @@ input[type="button"].button-primary:focus {
     margin-left: auto;
     margin-right: auto;
   }
-  #hero {
+  #title {
     /* height: 190px;
     padding: 16rem 0 14rem; */
   }
-  .hero-heading {
+  .title-heading {
     font-size: 2.6rem;
   }
   .phone {
@@ -312,10 +330,10 @@ input[type="button"].button-primary:focus {
   .second-section {
     padding: 32rem 0 19rem;
   }
-  #hero {
+  #title {
     /* padding: 22rem 0; */
   }
-  .hero-heading {
+  .title-heading {
     font-size: 3.0rem;
   }
   .phone {
