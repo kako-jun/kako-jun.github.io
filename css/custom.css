@@ -4,13 +4,13 @@ body {
 }
 
 a {
-  color: rgb(70, 200, 250);
+  color: cyan;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: rgb(160, 230, 255);
+  color: white;
 }
 
 img {
