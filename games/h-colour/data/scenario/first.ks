@@ -19,18 +19,6 @@
 ;プラグインの設定
 [call storage="system/plugin.ks"]
 
-;ユーザー設定
-[call storage="sub.ks"]
-
-[iscript]
-$(".chara_name_area").css("text-align", "center");
-$(".chara_name_area").css("width", "245px");
-
-
-[endscript]
-
-
-
 ;タイトルの設定
 ;[title name="now loading"]
 

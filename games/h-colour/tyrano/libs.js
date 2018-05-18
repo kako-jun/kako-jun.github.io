@@ -1278,3 +1278,19 @@ jQuery.extend(jQuery.easing, {
     }
 });
 
+
+        	    jQuery.loadText = function(file_path, callback) {
+        	        $.ajax({
+                            url: file_path,
+                            cache: true,
+                            success: function(text){
+                                order_str = text;
+                                callback(order_str);
+                            },
+                            error:function(){
+                                alert("file not found:"+file_path);
+                                callback("");
+                            }
+                    });
+                };
+                                

@@ -91,5 +91,6 @@ window.onload = function() { setTimeout(doScroll, 100); }
 </div>
 
 
+<script>if ('serviceWorker' in navigator) {navigator.serviceWorker.register('./tsw.js').catch(console.error.bind(console));}</script>
 </body>
 </html>
