@@ -55,7 +55,7 @@ if (sf.my.flags.clear_S1_1_1 === true) {
 tf.next_scene = next_scene + ".ks";
 [endscript]
 
-[bg storage="black.png" method=fadeInLeft cross=true time=200]
+[bg storage="black.png" method=fadeIn cross=true time=200]
 [fadeoutbgm2]
 [jump storage="&tf.next_scene"]
 
@@ -66,7 +66,7 @@ tf.next_scene = next_scene + ".ks";
 ; [clearfix]
 [wait_cancel]
 
-[bg storage="black.png" method=fadeInLeft cross=true time=200]
+[bg storage="black.png" method=fadeIn cross=true time=200]
 [awakegame]
 
 ;===================================================

@@ -188,8 +188,8 @@ if (!Date.now)
                     this.step += this.stepSize;
 
                     if (doRatio === false) {
-                        // this.x += Math.cos(this.step);
-                        this.x += Math.cos(this.step) + Math.floor(Math.random() * 3) - 1;
+                        this.x += Math.cos(this.step);
+                        // this.x += Math.cos(this.step) + Math.floor(Math.random() * 3) - 1;
                     } else {
                         this.x += (doRatio + Math.cos(this.step));
                     }

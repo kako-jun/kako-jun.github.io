@@ -16,7 +16,7 @@ f.preload_images = [
 
 [random_loading]
 [wait time=1000]
-[bg storage="black.png" method=fadeInLeft cross=true time=200]
+[bg storage="black.png" method=fadeIn cross=true time=200]
 
 [chara_mod name=background storage="chara/1/bg_series_2.png" cross=true time=3000]
 [chara_show name=background layer=base top=-30]

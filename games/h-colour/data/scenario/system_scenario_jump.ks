@@ -33,7 +33,7 @@ $(".layer_camera").empty();
 ;クリック時の処理
 *scene_clicked
 
-[bg storage="black.png" method=fadeInLeft cross=true time=200]
+[bg storage="black.png" method=fadeIn cross=true time=200]
 
 [cm]
 [layopt layer=message1 visible=false]

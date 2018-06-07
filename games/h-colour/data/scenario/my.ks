@@ -13,9 +13,11 @@
 [macro name="kanim_s"]
   [keyframe name=stand_anime_1]
   [frame p=0.2% x=0 y=0 rotate=0deg scale=1]
-  [frame p=25% x=100 y=0 rotate=-30deg scale=2]
+  ; [frame p=25% x=100 y=0 rotate=-30deg scale=2]
+  [frame p=25% x=100 y=0 rotate=-30deg scale=1.5]
   [frame p=50% x=50 y=0 rotate=0deg scale=1]
-  [frame p=75% x=-100 y=0 rotate=30deg scale=2]
+  ; [frame p=75% x=-100 y=0 rotate=30deg scale=2]
+  [frame p=75% x=-100 y=0 rotate=30deg scale=1.5]
   [frame p=100% x=0 y=0 rotate=0deg scale=1]
   [endkeyframe]
 
@@ -226,7 +228,7 @@
   tf.id = "bg_loading_" + id + ".png";
   [endscript]
 
-  [bg storage="&tf.id" method=fadeInLeft cross=true time=420]
+  [bg storage="&tf.id" method=fadeIn cross=true time=420]
 [endmacro]
 
 [macro name="ink"]
@@ -251,7 +253,7 @@
   [chara_hide_b]
 
   ;ロゴを表示
-  [image layer=0 folder="image" storage="&tf.series" time=2000 x=20 y=650]
+  [image layer=0 folder="image" storage="&tf.series" time=4200 x=20 y=650]
   [wait time=1000]
   [ptext layer=0 text="つづく" face="" size=30 color="0xf8f8f8" time=1000 x=520 y=760]
   [wait time=1000]
@@ -292,7 +294,7 @@
   [wait time=2000]
   [playbgm2 storage="eternal_three_or.ogg"]
 
-  [bg storage="&tf.cloud" method=fadeInLeft cross=true time=4200]
+  [bg storage="&tf.cloud" method=fadeIn cross=true time=4200]
   ; [chara_mod_b storage="chara/1/white.png"]
 
   [start_snow]
@@ -313,7 +315,7 @@
     [endscript]
 
     [keyframe name=poem_anime]
-    [frame p=30% opacity=1]
+    ; [frame p=30% opacity=1]
     [frame p=50% opacity=1]
     [frame p=80% opacity=1]
     [frame p=100% opacity=0]
@@ -342,11 +344,11 @@
     [frame p=100% opacity=0]
     [endkeyframe]
 
-    [kanim name="scene" keyframe=scene_anime time=5000 easing=linear]
+    [kanim name="scene" keyframe=scene_anime time=6000 easing=linear]
 
-    [wait time=5000]
-    [freeimage layer=0]
-    [wait time=1000]
+    [wait time=3000]
+    ; [freeimage layer=0]
+    ; [wait time=1000]
   [else]
     [ptext name="poem" layer=0 text=%text1 face="" size=30 color="0xf8f8f8" edge=black x=0 y=250]
     [ptext name="poem" layer=0 text=%text3 face="" size=30 color="0xf8f8f8" edge=black x=0 y=300]
@@ -361,7 +363,7 @@
     [endscript]
 
     [keyframe name=poem_anime]
-    [frame p=30% x=0 y=-30 opacity=1]
+    ; [frame p=30% x=0 y=-30 opacity=1]
     [frame p=50% x=0 y=-50 opacity=1]
     [frame p=80% x=0 y=-80 opacity=1]
     [frame p=100% x=0 y=-100 opacity=0]
@@ -378,9 +380,10 @@
 [macro name="end_poem"]
   [fadeoutbgm2]
   [end_snow fade="true"]
-  [bg storage="white.png" method=fadeInLeft cross=true time=4200]
-  [wait time=2000]
-  [bg storage="black.png" method=fadeInLeft cross=true time=200]
+  [bg storage="white.png" method=fadeIn cross=true time=4200]
+  [freeimage layer=0]
+  [wait time=1000]
+  [bg storage="black.png" method=fadeIn cross=true time=200]
 [endmacro]
 
 [macro name="start_snow"]
