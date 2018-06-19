@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>BBS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <h1>BBS</h1>
+  <h2>スレッド一覧</h2>
+  <ul id='threads'>
+  </ul>
+  <hr>
+  <h3>コメント一覧</h3>
+  <ul id='comments'>
+  </ul>
+  <div id="comment-form">
+    <hr>
+    <h4>コメント投稿</h4>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8 form-inline">
+          <input id="name" class="form-control input-sm" type="text" placeholder="ハンドルネーム / 名前" size="21">
+        </div>
+        <div class="col-xs-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">
+          <textarea id="desc" class="form-control input-sm" placeholder="投稿内容" rows="4"></textarea>
+        </div>
+        <div class="col-xs-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8 form-inline">
+          <input id="quiz" class="form-control input-sm" type="text" placeholder="" size="21">
+        </div>
+        <div class="col-xs-2"></div>
+      </div>
+      <div class="text-center">
+        <button id="send" class="btn btn-success"><span class="glyphicon glyphicon-check"></span> 送信して後悔しない</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal1" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">投稿しました</h4>
+        </div>
+        <div class="modal-body">
+          <h3>コメントが承認されるまで、のんびりお待ちください。</h3>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore-min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
