@@ -50,13 +50,17 @@ var updateComments = function (threadID) {
 var generateQuiz = function () {
   var qs = [
     '40 + 2 = ?',
+    '41 + 1 = ?',
     '43 - 1 = ?',
+    '44 - 2 = ?',
+    '21 * 2 = ?',
     '14 * 3 = ?',
+    '420 / 10 = ?',
     '4200 / 100 = ?',
     '100 + 42 - 100 = ?',
   ];
 
-  var i = _.random(0, 4);
+  var i = _.random(0, 8);
   $('#comment-form #quiz').attr('placeholder', qs[i]);
 };
 
