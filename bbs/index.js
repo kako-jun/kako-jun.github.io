@@ -103,8 +103,8 @@ $('#send').on('click', function () {
       'data': JSON.stringify({
         threadID: threadID,
         dt: dt,
-        name: name,
-        desc: desc,
+        name: _.escape(name),
+        desc: _.escape(desc),
         ip: res,
       }),
       'type': 'POST',
