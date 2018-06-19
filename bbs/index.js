@@ -95,7 +95,7 @@ $('#send').on('click', function () {
   var hour = ('00' + now.getHours()).slice(-2);
   var min = ('00' + now.getMinutes()).slice(-2);
   var sec = ('00' + now.getSeconds()).slice(-2);
-  var dt = year + '-' + mon + '-' + date + '_' + hour + '-' + min + '-' + sec;
+  var dt = year + '-' + mon + '-' + date + ' ' + hour + ':' + min + ':' + sec;
 
   $.get('http://ipinfo.io', function (res) {
     $.ajax({
