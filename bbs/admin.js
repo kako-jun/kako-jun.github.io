@@ -15,7 +15,7 @@ var updateThreads = function () {
         return (comment.visible === false);
       }).length;
 
-      $('#threads').append('<li value="' + thread.id + '">' + thread.title + ' ' + thread.comments.length +' コメント (承認待ち ' + invisible_num + ')</li>');
+      $('#threads').append('<li value="' + thread.id + '">' + thread.title + ' ---- ' + thread.comments.length +' コメント (承認待ち ' + invisible_num + ')</li>');
     });
   // }).fail(function (res) {
     // alert(JSON.stringify(res));

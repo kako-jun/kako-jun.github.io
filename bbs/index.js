@@ -15,7 +15,7 @@ var updateThreads = function () {
         return (comment.visible === false);
       }).length;
 
-      $('#threads').append('<li value="' + thread.id + '">' + thread.title + ' ' + thread.comments.length +' コメント (承認待ち ' + invisible_num + ')</li>');
+      $('#threads').append('<li value="' + thread.id + '">' + thread.title + ' ---- ' + thread.comments.length +' コメント (承認待ち ' + invisible_num + ')</li>');
     });
   // }).fail(function (res) {
     // alert(JSON.stringify(res));
@@ -37,7 +37,7 @@ var updateComments = function (threadID) {
 
   _.each(comments, function (comment) {
     if (comment.visible) {
-      $('#comments').append('<li value="' + comment.id + '">' + comment.id + '<br>' + comment.name + '<br>' + comment.dt + '<br>' + comment.desc + '</li>');
+      $('#comments').append('<li value="' + comment.id + '">' + comment.id + '<br>' + comment.name + '<br>' + comment.dt + '<br>' + comment.ip.city + '<br>' + comment.desc + '</li>');
     }
   });
 

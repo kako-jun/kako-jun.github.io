@@ -4,42 +4,6 @@
     "title": "スレッド0",
     "comments": [
       {
-        "id": 0,
-        "dt": "2018-06-19_19-01-23",
-        "name": "ほげ",
-        "desc": "ほげげ",
-        "remote_ip": "127.0.0.1",
-        "ip": {
-          "ip": "202.232.243.210",
-          "hostname": "210.208a.243.232.202.in-addr.arpa",
-          "city": "Tokyo",
-          "region": "Tokyo",
-          "country": "JP",
-          "loc": "35.6850,139.7510",
-          "postal": "102-0082",
-          "org": "AS2497 Internet Initiative Japan Inc."
-        },
-        "visible": true
-      },
-      {
-        "id": 1,
-        "dt": "2018-06-19_19-47-03",
-        "name": "ｑ",
-        "desc": "えええｑ",
-        "remote_ip": "127.0.0.1",
-        "ip": {
-          "ip": "202.232.243.210",
-          "hostname": "210.208a.243.232.202.in-addr.arpa",
-          "city": "Tokyo",
-          "region": "Tokyo",
-          "country": "JP",
-          "loc": "35.6850,139.7510",
-          "postal": "102-0082",
-          "org": "AS2497 Internet Initiative Japan Inc."
-        },
-        "visible": false
-      },
-      {
         "id": 2,
         "dt": "2018-06-19_19-50-42",
         "name": "aa",
