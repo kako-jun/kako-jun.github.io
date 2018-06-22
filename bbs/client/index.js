@@ -1,24 +1,22 @@
 
+var serverRoot = 'http://localhost:4201/';
+
 var threads = [];
 var threadID = 0;
 
-var updateThreads = function () {
+var redrawThreads = function () {
   var dfd = $.Deferred();
 
-  $.getJSON('http://localhost:4000/api/threads')
+  $.getJSON(serverRoot + 'api/threads/comments')
   .done(function (res) {
     threads = res;
 
     $('#threads').empty();
     _.each(threads, function (thread) {
-      var invisible_num = _.filter(thread.comments, function (comment) {
-        return (comment.visible === false);
-      }).length;
-
-      $('#threads').append('<li value="' + thread.id + '">' + thread.title + ' ---- ' + thread.comments.length +' コメント (承認待ち ' + invisible_num + ')</li>');
+      $('#threads').append('<li value="' + thread.id + '">' + thread.title.ja + ' ' + thread.desc.ja + ' ---- ' + thread.comments.length +' コメント (承認待ち ' + thread.invisible_num + ')</li>');
     });
-  // }).fail(function (res) {
-    // alert(JSON.stringify(res));
+  }).fail(function (res) {
+    alert(JSON.stringify(res));
   }).always(function () {
     dfd.resolve();
   });
@@ -26,7 +24,7 @@ var updateThreads = function () {
   return dfd.promise();
 };
 
-var updateComments = function (threadID) {
+var redrawComments = function (threadID) {
   var found = _.find(threads, function (thread) {
     return (thread.id === threadID);
   });
@@ -67,13 +65,13 @@ var generateQuiz = function () {
 $(function () {
   $('#comment-form').hide();
 
-  updateThreads();
+  redrawThreads();
 });
 
 $('#threads').on('click', 'li', function () {
   threadID = Number($(this).val());
 
-  updateComments(threadID);
+  redrawComments(threadID);
   $('#comment-form').fadeIn();
 });
 
@@ -103,27 +101,26 @@ $('#send').on('click', function () {
 
   $.get('http://ipinfo.io', function (res) {
     $.ajax({
-      'url': 'http://localhost:4000/api/add-comment',
-      'data': JSON.stringify({
-        threadID: threadID,
+      'url': serverRoot + 'api/threads/' + threadID + '/comments',
+      'data': {
         dt: dt,
         name: _.escape(name),
         desc: _.escape(desc),
         ip: res,
-      }),
+      },
       'type': 'POST',
       'cache': false,
       'dataType': 'json',
-    // }).done(function (res) {
-    //   alert(JSON.stringify(res));
-    // }).fail(function (res) {
-    //   alert(JSON.stringify(res));
-    }).always(function () {
-      updateThreads().always(function () {
-        updateComments(threadID);
+    }).done(function (res) {
+      // alert(JSON.stringify(res));
+      redrawThreads().always(function () {
+        redrawComments(threadID);
 
         $('#modal1').modal();
       });
+    }).fail(function (res) {
+      alert(JSON.stringify(res));
+    }).always(function () {
     });
   }, 'jsonp');
 
