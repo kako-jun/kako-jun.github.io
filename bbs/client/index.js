@@ -16,7 +16,8 @@ var redrawThreads = function () {
       $('#threads').append('<li value="' + thread.id + '">' + thread.title.ja + ' ' + thread.desc.ja + ' ---- ' + thread.comments.length +' コメント (承認待ち ' + thread.invisible_num + ')</li>');
     });
   }).fail(function (res) {
-    alert(JSON.stringify(res));
+    // alert(JSON.stringify(res));
+    alert('スレッド一覧の取得に失敗');
   }).always(function () {
     dfd.resolve();
   });
@@ -35,7 +36,7 @@ var redrawComments = function (threadID) {
 
   _.each(comments, function (comment) {
     if (comment.visible) {
-      $('#comments').append('<li value="' + comment.id + '">' + comment.id + '<br>' + comment.name + '<br>' + comment.dt + '<br>' + comment.ip.city + '<br>' + comment.desc + '</li>');
+      $('#comments').append('<li value="' + comment.id + '">' + comment.id + '<br>' + comment.name + '<br>' + comment.dt + '<br>' + comment.country + '<br>' + comment.desc + '</li>');
     }
   });
 
@@ -43,6 +44,18 @@ var redrawComments = function (threadID) {
   $('#comment-form #desc').val('');
   $('#comment-form #quiz').val('');
   generateQuiz();
+};
+
+var redrawCommentsWithPreview = function (thread) {
+  var comments = thread.comments;
+
+  $('#comments').empty();
+
+  _.each(comments, function (comment) {
+    if (comment.visible) {
+      $('#comments').append('<li value="' + comment.id + '">' + comment.id + '<br>' + comment.name + '<br>' + comment.dt + '<br>' + comment.country + '<br>' + comment.desc + '</li>');
+    }
+  });
 };
 
 var generateQuiz = function () {
@@ -75,19 +88,87 @@ $('#threads').on('click', 'li', function () {
   $('#comment-form').fadeIn();
 });
 
+$('#preview').on('click', function () {
+  var name = $('#comment-form #name').val();
+  var desc = $('#comment-form #desc').val();
+
+  if (name.length > 42) {
+    alert('名前は42文字まで');
+    return;
+  }
+
+  if (!desc) {
+    alert('本文が空白');
+    return;
+  }
+
+  if (desc.length > 420) {
+    alert('本文は420文字まで');
+    return;
+  }
+
+  if (!name) {
+    name = '無色透明さん';
+  }
+
+  var now = new Date();
+  var year = now.getFullYear();
+  var mon = ('00' + (now.getMonth() + 1)).slice(-2);
+  var date = ('00' + now.getDate()).slice(-2);
+  var hour = ('00' + now.getHours()).slice(-2);
+  var min = ('00' + now.getMinutes()).slice(-2);
+  var sec = ('00' + now.getSeconds()).slice(-2);
+  var dt = year + '-' + mon + '-' + date + ' ' + hour + ':' + min + ':' + sec;
+
+  $.get('http://ipinfo.io', function (res) {
+    $.ajax({
+      'url': serverRoot + 'api/threads/' + threadID + '/comments/preview',
+      'data': {
+        dt: dt,
+        name: _.escape(name),
+        desc: _.escape(desc),
+        info: res,
+      },
+      'type': 'POST',
+      'cache': false,
+      'dataType': 'json',
+    }).done(function (res) {
+      redrawCommentsWithPreview(res);
+    }).fail(function (res) {
+      // alert(JSON.stringify(res));
+      alert('プレビューに失敗');
+    }).always(function () {
+    });
+  }, 'jsonp');
+});
+
 $('#send').on('click', function () {
   var name = $('#comment-form #name').val();
   var desc = $('#comment-form #desc').val();
   var answer = $('#comment-form #quiz').val();
 
-  if (!name || !desc || !answer) {
-    alert('だめよ');
+  if (name.length > 42) {
+    alert('名前は42文字まで');
+    return;
+  }
+
+  if (!desc) {
+    alert('本文が空白');
+    return;
+  }
+
+  if (desc.length > 420) {
+    alert('本文は420文字まで');
     return;
   }
 
   if (answer !== '42') {
-    alert('だめよ');
+    alert('答えが違います');
     return;
+  }
+
+  if (!name) {
+    name = '無色透明さん';
   }
 
   var now = new Date();
@@ -106,7 +187,7 @@ $('#send').on('click', function () {
         dt: dt,
         name: _.escape(name),
         desc: _.escape(desc),
-        ip: res,
+        info: res,
       },
       'type': 'POST',
       'cache': false,
@@ -116,12 +197,12 @@ $('#send').on('click', function () {
       redrawThreads().always(function () {
         redrawComments(threadID);
 
-        $('#modal1').modal();
+        alert('投稿しました！\nコメントありがとうー。\n承認されるまで、のんびりお待ちください。');
       });
     }).fail(function (res) {
-      alert(JSON.stringify(res));
+      // alert(JSON.stringify(res));
+      alert('投稿に失敗');
     }).always(function () {
     });
   }, 'jsonp');
-
 });

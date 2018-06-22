@@ -1,5 +1,6 @@
 
 var serverRoot = 'http://localhost:4201/';
+var key = '42';
 
 var threads = [];
 var threadID = 0;
@@ -35,9 +36,9 @@ var redrawComments = function (threadID) {
 
   _.each(comments, function (comment) {
     if (comment.visible) {
-      $('#comments').append('<li value="' + comment.id + '"><button class="change-invisible btn btn-warning btn-sm"><span class="glyphicon glyphicon-unchecked"></span> 許可しない</button>' + comment.id + '<br>' + comment.name + '<br>' + comment.dt + '<br>' + comment.desc + '<br>' + comment.remote_ip + '<br>' + JSON.stringify(comment.ip) + '<button class="remove btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> 削除する</button></li>');
+      $('#comments').append('<li value="' + comment.id + '"><button class="change-invisible btn btn-warning btn-sm"><span class="glyphicon glyphicon-unchecked"></span> 許可しない</button>' + comment.id + '<br>' + comment.name + '<br>' + comment.dt + '<br>' + comment.desc + '<br>' + comment.host + '<br>' + comment.country + '<br>' + JSON.stringify(comment.info) + '<button class="remove btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> 削除する</button></li>');
     } else {
-      $('#comments').append('<li value="' + comment.id + '"><button class="change-visible btn btn-success btn-sm"><span class="glyphicon glyphicon-check"></span> 許可する</button>' + comment.id + '<br>' + comment.name + '<br>' + comment.dt + '<br>' + comment.desc + '<br>' + comment.remote_ip + '<br>' + JSON.stringify(comment.ip) + '<button class="remove btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> 削除する</button></li>');
+      $('#comments').append('<li value="' + comment.id + '"><button class="change-visible btn btn-success btn-sm"><span class="glyphicon glyphicon-check"></span> 許可する</button>' + comment.id + '<br>' + comment.name + '<br>' + comment.dt + '<br>' + comment.desc + '<br>' + comment.host + '<br>' + comment.country + '<br>' + JSON.stringify(comment.info) + '<button class="remove btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> 削除する</button></li>');
     }
   });
 };
@@ -47,6 +48,7 @@ var updateComment = function (commentID, visible) {
     'url': serverRoot + 'api/threads/' + threadID + '/comments/' + commentID,
     'data': {
       visible: visible,
+      key: key,
     },
     'type': 'PUT',
     'cache': false,
@@ -77,7 +79,12 @@ $('#comments').on('click', '.remove', function () {
 
   $.ajax({
     'url': serverRoot + 'api/threads/' + threadID + '/comments/' + commentID,
+    'data': {
+      key: key,
+    },
     'type': 'DELETE',
+    'cache': false,
+    'dataType': 'json',
   }).done(function (res) {
     // alert(JSON.stringify(res));
     redrawThreads().always(function () {

@@ -1,0 +1,15 @@
+{
+  "name_list": [
+    "test",
+    "テスト",
+    "hoge"
+  ],
+  "host_list": [
+    "localhost:420",
+    "202.232.243.210"
+  ],
+  "word_list": [
+    "test",
+    "kill"
+  ]
+}
