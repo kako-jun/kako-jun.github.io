@@ -2,24 +2,6 @@
   "id": 0,
   "comments": [
     {
-      "id": 5,
-      "dt": "2018-06-19_20-00-47",
-      "name": "s",
-      "desc": "s",
-      "remote_ip": "127.0.0.1",
-      "ip": {
-        "ip": "202.232.243.210",
-        "hostname": "210.208a.243.232.202.in-addr.arpa",
-        "city": "Tokyo",
-        "region": "Tokyo",
-        "country": "JP",
-        "loc": "35.6850,139.7510",
-        "postal": "102-0082",
-        "org": "AS2497 Internet Initiative Japan Inc."
-      },
-      "visible": false
-    },
-    {
       "id": 6,
       "dt": "2018-06-19_20-07-11",
       "name": "a",
@@ -481,6 +463,42 @@
         "loc": "35.6850,139.7510",
         "postal": "102-0082",
         "org": "AS2497 IIJ-AS"
+      },
+      "visible": false
+    },
+    {
+      "id": 31,
+      "dt": "2018-06-23 00:46:56",
+      "name": "無色透明さん",
+      "desc": "うんこ",
+      "host": "localhost:4201",
+      "country": "Japan",
+      "info": {
+        "ip": "202.222.48.69",
+        "hostname": "asa048069.asagaotv.ne.jp",
+        "city": "Matto",
+        "region": "Ishikawa",
+        "country": "JP",
+        "loc": "36.5167,136.5670",
+        "org": "AS18121 Ishikawa Computer Center Co.,LTD."
+      },
+      "visible": false
+    },
+    {
+      "id": 32,
+      "dt": "2018-06-23 00:48:03",
+      "name": "無色透明さん",
+      "desc": "うんこ",
+      "host": "localhost:4201",
+      "country": "Japan",
+      "info": {
+        "ip": "202.222.48.69",
+        "hostname": "asa048069.asagaotv.ne.jp",
+        "city": "Matto",
+        "region": "Ishikawa",
+        "country": "JP",
+        "loc": "36.5167,136.5670",
+        "org": "AS18121 Ishikawa Computer Center Co.,LTD."
       },
       "visible": false
     }

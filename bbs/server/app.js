@@ -1,11 +1,11 @@
-
+"use strict"
 const _ = require('underscore');
 const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const iso3311a2 = require('iso-3166-1-alpha-2');
-const sendmail = require('sendmail')();
+// const sendmail = require('sendmail')();
 
 const writeJSON = (path, json) => {
   const jsonStr = JSON.stringify(json, null, '  ');
@@ -156,17 +156,17 @@ const isIgnore = (name, host, desc) => {
   return false;
 };
 
-const sendMail = () => {
-  sendmail({
-    from: 'foxgrapefruits@gmail.com',
-    to: 'foxgrapefruits@gmail.com',
-    subject: '件名も化けなかった',
-    text: 'これは本文',
-  }, (err, reply) => {
-    console.log(err && err.stack);
-    console.dir(reply);
-  });
-};
+// const sendMail = () => {
+//   sendmail({
+//     from: 'foxgrapefruits@gmail.com',
+//     to: 'foxgrapefruits@gmail.com',
+//     subject: '件名も化けなかった',
+//     text: 'これは本文',
+//   }, (err, reply) => {
+//     console.log(err && err.stack);
+//     console.dir(reply);
+//   });
+// };
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -223,7 +223,7 @@ app.post('/api/threads/:threadID/comments', (req, res) => {
     return;
   }
 
-  thread = addComment(threadID, {
+  const thread = addComment(threadID, {
     dt: req.body.dt,
     name: req.body.name,
     desc: req.body.desc,
@@ -244,7 +244,7 @@ app.post('/api/threads/:threadID/comments/preview', (req, res) => {
     return;
   }
 
-  thread = previewComment(threadID, {
+  const thread = previewComment(threadID, {
     dt: req.body.dt,
     name: req.body.name,
     desc: req.body.desc,
