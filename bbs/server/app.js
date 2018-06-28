@@ -187,12 +187,23 @@ app.get('/api/threads', (req, res) => {
 });
 
 app.get('/api/threads/comments', (req, res) => {
+  var admin = false;
+  if (req.query.key === '42') {
+    admin = true;
+  }
+
   const threads = readThreads();
   _.map(threads, (thread) => {
-    const comments = readThread(thread.id).comments;
+    let comments = readThread(thread.id).comments;
     var invisible_num = _.filter(comments, (comment) => {
       return (comment.visible === false);
     }).length;
+
+    if (!admin) {
+      comments = _.map(comments, function (comment) {
+        return _.omit(comment, 'host', 'info');
+      });
+    }
 
     thread = _.extend(thread, {
       comments: comments,
@@ -282,6 +293,83 @@ app.put('/api/threads/:threadID/comments/:commentID', (req, res) => {
   });
 
   res.send(thread);
+});
+
+const getRankingName = (id) => {
+  var name = '';
+  switch (id) {
+    case 0:
+      name = 'tin-tilo-rings';
+      break;
+  }
+
+  return name;
+};
+
+const readRanking = (id) => {
+  const ranking = JSON.parse(fs.readFileSync('json/ranking_' + getRankingName(id) + '.json', { encoding: 'utf-8' }));
+  return ranking;
+};
+
+const addEntry = (rankingID, params) => {
+  const ranking = readRanking(rankingID);
+  let nextEntryID = 0;
+  if (ranking.length > 0) {
+    const lastEntry = _.max(ranking, (entry) => {
+      return entry.id;
+    });
+
+    nextEntryID = lastEntry.id + 1;
+  }
+
+  ranking.push({
+    id: nextEntryID,
+    dt: params.dt,
+    name: params.name,
+    rule: params.rule,
+    score: params.score,
+    host: params.host,
+    country: params.country,
+    info: params.info,
+    visible: params.visible,
+  });
+
+  writeJSON('json/ranking_' + getRankingName(rankingID) + '.json', ranking);
+  // writeJSON('json/ranking_' + rankingID + '_bk.json', ranking);
+  return ranking;
+};
+
+app.get('/api/rankings/:rankingID', (req, res) => {
+  const rankingID = Number(req.params.rankingID);
+
+  const ranking = readRanking(rankingID);
+  res.send(ranking);
+});
+
+app.post('/api/rankings/:rankingID/entries', (req, res) => {
+  const rankingID = Number(req.params.rankingID);
+
+  if (!hasValidInterval(rankingID, req.body.dt, req.headers.host)) {
+    return;
+  }
+
+  if (isIgnore(req.body.name, req.headers.host, '')) {
+    return;
+  }
+
+  const ranking = addEntry(rankingID, {
+    dt: req.body.dt,
+    name: req.body.name,
+    rule: req.body.rule,
+    score: req.body.score,
+    host: req.headers.host,
+    country: iso3311a2.getCountry(req.body.info.country),
+    info: req.body.info,
+    visible: true,
+  });
+
+  res.send(ranking);
+  // sendMail();
 });
 
 app.listen(4201);

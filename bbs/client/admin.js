@@ -8,7 +8,7 @@ var threadID = 0;
 var redrawThreads = function () {
   var dfd = $.Deferred();
 
-  $.getJSON(serverRoot + 'api/threads/comments')
+  $.getJSON(serverRoot + 'api/threads/comments?key=42')
   .done(function (res) {
     threads = res;
 
