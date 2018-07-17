@@ -7,13 +7,17 @@ var threadID = 0;
 var redrawThreads = function () {
   var dfd = $.Deferred();
 
-  $.getJSON(serverRoot + 'api/threads/comments')
-  .done(function (res) {
+  $.ajax({
+    'url': serverRoot + 'api/threads/comments',
+    'type': 'GET',
+    'cache': false,
+    'dataType': 'json',
+  }).done(function (res) {
     threads = res;
 
     $('#threads').empty();
     _.each(threads, function (thread) {
-      $('#threads').append('<li value="' + thread.id + '">' + thread.title.ja + ' ' + thread.desc.ja + ' ---- ' + thread.comments.length +' コメント (承認待ち ' + thread.invisible_num + ')</li>');
+      $('#threads').append('<li value="' + thread.id + '">' + thread.title.ja + ' ' + thread.desc.ja + ' ---- ' + thread.comments.length + ' コメント (承認待ち ' + thread.invisible_num + ')</li>');
     });
   }).fail(function (res) {
     // alert(JSON.stringify(res));
@@ -120,7 +124,10 @@ $('#preview').on('click', function () {
   var sec = ('00' + now.getSeconds()).slice(-2);
   var dt = year + '-' + mon + '-' + date + ' ' + hour + ':' + min + ':' + sec;
 
-  $.get('http://ipinfo.io', function (res) {
+  $.ajax({
+    url: 'https://ipinfo.io',
+    dataType: 'jsonp',
+  }).done(function (res) {
     $.ajax({
       'url': serverRoot + 'api/threads/' + threadID + '/comments/preview',
       'data': {
@@ -139,7 +146,9 @@ $('#preview').on('click', function () {
       alert('プレビューに失敗');
     }).always(function () {
     });
-  }, 'jsonp');
+  }).fail(function () {
+  }).always(function () {
+  });
 });
 
 $('#send').on('click', function () {
@@ -180,7 +189,10 @@ $('#send').on('click', function () {
   var sec = ('00' + now.getSeconds()).slice(-2);
   var dt = year + '-' + mon + '-' + date + ' ' + hour + ':' + min + ':' + sec;
 
-  $.get('http://ipinfo.io', function (res) {
+  $.ajax({
+    url: 'https://ipinfo.io',
+    dataType: 'jsonp',
+  }).done(function (res) {
     $.ajax({
       'url': serverRoot + 'api/threads/' + threadID + '/comments',
       'data': {
@@ -204,5 +216,7 @@ $('#send').on('click', function () {
       alert('投稿に失敗');
     }).always(function () {
     });
-  }, 'jsonp');
+  }).fail(function () {
+  }).always(function () {
+  });
 });

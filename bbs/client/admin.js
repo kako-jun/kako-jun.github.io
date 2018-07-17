@@ -8,13 +8,17 @@ var threadID = 0;
 var redrawThreads = function () {
   var dfd = $.Deferred();
 
-  $.getJSON(serverRoot + 'api/threads/comments?key=42')
-  .done(function (res) {
+  $.ajax({
+    'url': serverRoot + 'api/threads/comments?key=42',
+    'type': 'GET',
+    'cache': false,
+    'dataType': 'json',
+  }).done(function (res) {
     threads = res;
 
     $('#threads').empty();
     _.each(threads, function (thread) {
-      $('#threads').append('<li value="' + thread.id + '">' + thread.title.ja + ' ' + thread.desc.ja + ' ---- ' + thread.comments.length +' コメント (承認待ち ' + thread.invisible_num + ')</li>');
+      $('#threads').append('<li value="' + thread.id + '">' + thread.title.ja + ' ' + thread.desc.ja + ' ---- ' + thread.comments.length + ' コメント (承認待ち ' + thread.invisible_num + ')</li>');
     });
   }).fail(function (res) {
     alert(JSON.stringify(res));
