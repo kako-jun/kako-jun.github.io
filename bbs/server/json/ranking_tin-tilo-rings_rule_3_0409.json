@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "dt": "2018-07-17 14:32:19",
+    "name": "xyz",
+    "score": "50",
+    "time": "00:04:02.899",
+    "bet_times": "1",
+    "max_combo": "0",
+    "max_gain": "50",
+    "average_gain": "50",
+    "stats": {
+      "max_combo": "0",
+      "max_gain": "50",
+      "roll": {
+        "pinzoro": "0",
+        "arashikabu": "0",
+        "kemono": "0",
+        "triple_seven": "0",
+        "zorome": "0",
+        "shigoro": "0",
+        "hifumi": "0",
+        "pinbasami": "0",
+        "me": "0",
+        "pin": "2",
+        "nizou": "1",
+        "santa": "2",
+        "yotsuya": "0",
+        "goke": "0",
+        "roppou": "0",
+        "shichiken": "2",
+        "oicho": "1",
+        "kabu": "2",
+        "pink_ribbon": "0",
+        "buta": "1"
+      },
+      "zone": {
+        "bullet_time": "0",
+        "revolution": "0"
+      },
+      "triple_seven": {
+        "all_1": "0",
+        "all_6": "0",
+        "all_123": "0",
+        "all_456": "0",
+        "sorted": "0",
+        "others": "0",
+        "rollback": "0"
+      },
+      "egg": {
+        "ambulance": "0"
+      }
+    },
+    "host": "localhost:4201",
+    "country": "Japan",
+    "info": {
+      "ip": "202.232.243.210",
+      "hostname": "210.208a.243.232.202.in-addr.arpa",
+      "city": "Tokyo",
+      "region": "Tokyo",
+      "country": "JP",
+      "loc": "35.6850,139.7510",
+      "postal": "102-0082",
+      "org": "AS2497 Internet Initiative Japan Inc."
+    },
+    "visible": true
+  },
+  {
+    "id": 2,
+    "dt": "2018-07-17 14:39:22",
+    "name": "xyz",
+    "score": "325",
+    "time": "00:04:03.243",
+    "bet_times": "3",
+    "max_combo": "1",
+    "max_gain": "228",
+    "average_gain": "108.3",
+    "stats": {
+      "max_combo": "1",
+      "max_gain": "228",
+      "roll": {
+        "pinzoro": "0",
+        "arashikabu": "1",
+        "kemono": "0",
+        "triple_seven": "0",
+        "zorome": "0",
+        "shigoro": "1",
+        "hifumi": "0",
+        "pinbasami": "0",
+        "me": "5",
+        "pin": "2",
+        "nizou": "3",
+        "santa": "4",
+        "yotsuya": "3",
+        "goke": "2",
+        "roppou": "3",
+        "shichiken": "1",
+        "oicho": "3",
+        "kabu": "2",
+        "pink_ribbon": "0",
+        "buta": "3"
+      },
+      "zone": {
+        "bullet_time": "0",
+        "revolution": "0"
+      },
+      "triple_seven": {
+        "all_1": "0",
+        "all_6": "0",
+        "all_123": "0",
+        "all_456": "0",
+        "sorted": "0",
+        "others": "0",
+        "rollback": "0"
+      },
+      "egg": {
+        "ambulance": "1"
+      }
+    },
+    "host": "localhost:4201",
+    "country": "Japan",
+    "info": {
+      "ip": "202.232.243.210",
+      "hostname": "210.208a.243.232.202.in-addr.arpa",
+      "city": "Tokyo",
+      "region": "Tokyo",
+      "country": "JP",
+      "loc": "35.6850,139.7510",
+      "postal": "102-0082",
+      "org": "AS2497 Internet Initiative Japan Inc."
+    },
+    "visible": true
+  },
+  {
+    "id": 3,
+    "dt": "2018-07-17 14:40:08",
+    "name": "xyz",
+    "score": "51",
+    "time": "00:04:04.390",
+    "bet_times": "1",
+    "max_combo": "0",
+    "max_gain": "51",
+    "average_gain": "51",
+    "stats": {
+      "max_combo": "0",
+      "max_gain": "51",
+      "roll": {
+        "pinzoro": "0",
+        "arashikabu": "0",
+        "kemono": "0",
+        "triple_seven": "0",
+        "zorome": "0",
+        "shigoro": "0",
+        "hifumi": "0",
+        "pinbasami": "0",
+        "me": "2",
+        "pin": "0",
+        "nizou": "1",
+        "santa": "2",
+        "yotsuya": "1",
+        "goke": "0",
+        "roppou": "1",
+        "shichiken": "1",
+        "oicho": "0",
+        "kabu": "2",
+        "pink_ribbon": "0",
+        "buta": "1"
+      },
+      "zone": {
+        "bullet_time": "0",
+        "revolution": "0"
+      },
+      "triple_seven": {
+        "all_1": "0",
+        "all_6": "0",
+        "all_123": "0",
+        "all_456": "0",
+        "sorted": "0",
+        "others": "0",
+        "rollback": "0"
+      },
+      "egg": {
+        "ambulance": "0"
+      }
+    },
+    "host": "localhost:4201",
+    "country": "Japan",
+    "info": {
+      "ip": "202.232.243.210",
+      "hostname": "210.208a.243.232.202.in-addr.arpa",
+      "city": "Tokyo",
+      "region": "Tokyo",
+      "country": "JP",
+      "loc": "35.6850,139.7510",
+      "postal": "102-0082",
+      "org": "AS2497 Internet Initiative Japan Inc."
+    },
+    "visible": true
+  },
+  {
+    "id": 4,
+    "dt": "2018-07-17 14:55:34",
+    "name": "xyz",
+    "score": "41",
+    "time": "00:04:05.023",
+    "bet_times": "1",
+    "max_combo": "0",
+    "max_gain": "41",
+    "average_gain": "41",
+    "stats": {
+      "max_combo": "0",
+      "max_gain": "41",
+      "roll": {
+        "pinzoro": "0",
+        "arashikabu": "0",
+        "kemono": "0",
+        "triple_seven": "0",
+        "zorome": "0",
+        "shigoro": "0",
+        "hifumi": "0",
+        "pinbasami": "0",
+        "me": "3",
+        "pin": "0",
+        "nizou": "3",
+        "santa": "0",
+        "yotsuya": "0",
+        "goke": "0",
+        "roppou": "1",
+        "shichiken": "1",
+        "oicho": "0",
+        "kabu": "1",
+        "pink_ribbon": "0",
+        "buta": "2"
+      },
+      "zone": {
+        "bullet_time": "0",
+        "revolution": "0"
+      },
+      "triple_seven": {
+        "all_1": "0",
+        "all_6": "0",
+        "all_123": "0",
+        "all_456": "0",
+        "sorted": "0",
+        "others": "0",
+        "rollback": "0"
+      },
+      "egg": {
+        "ambulance": "0"
+      }
+    },
+    "host": "localhost:4201",
+    "country": "Japan",
+    "info": {
+      "ip": "202.232.243.210",
+      "hostname": "210.208a.243.232.202.in-addr.arpa",
+      "city": "Tokyo",
+      "region": "Tokyo",
+      "country": "JP",
+      "loc": "35.6850,139.7510",
+      "postal": "102-0082",
+      "org": "AS2497 Internet Initiative Japan Inc."
+    },
+    "visible": true
+  },
+  {
+    "id": 5,
+    "dt": "2018-07-17 14:57:15",
+    "name": "xyz",
+    "score": "112",
+    "time": "00:03:45.431",
+    "bet_times": "1",
+    "max_combo": "1",
+    "max_gain": "112",
+    "average_gain": "112",
+    "stats": {
+      "max_combo": "1",
+      "max_gain": "112",
+      "roll": {
+        "pinzoro": "0",
+        "arashikabu": "0",
+        "kemono": "0",
+        "triple_seven": "0",
+        "zorome": "0",
+        "shigoro": "1",
+        "hifumi": "0",
+        "pinbasami": "0",
+        "me": "2",
+        "pin": "0",
+        "nizou": "0",
+        "santa": "1",
+        "yotsuya": "2",
+        "goke": "2",
+        "roppou": "1",
+        "shichiken": "0",
+        "oicho": "0",
+        "kabu": "2",
+        "pink_ribbon": "0",
+        "buta": "0"
+      },
+      "zone": {
+        "bullet_time": "0",
+        "revolution": "0"
+      },
+      "triple_seven": {
+        "all_1": "0",
+        "all_6": "0",
+        "all_123": "0",
+        "all_456": "0",
+        "sorted": "0",
+        "others": "0",
+        "rollback": "0"
+      },
+      "egg": {
+        "ambulance": "0"
+      }
+    },
+    "host": "localhost:4201",
+    "country": "Japan",
+    "info": {
+      "ip": "202.232.243.210",
+      "hostname": "210.208a.243.232.202.in-addr.arpa",
+      "city": "Tokyo",
+      "region": "Tokyo",
+      "country": "JP",
+      "loc": "35.6850,139.7510",
+      "postal": "102-0082",
+      "org": "AS2497 Internet Initiative Japan Inc."
+    },
+    "visible": true
+  }
+]

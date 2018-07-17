@@ -295,24 +295,13 @@ app.put('/api/threads/:threadID/comments/:commentID', (req, res) => {
   res.send(thread);
 });
 
-const getRankingName = (id) => {
-  var name = '';
-  switch (id) {
-    case 0:
-      name = 'tin-tilo-rings';
-      break;
-  }
-
-  return name;
-};
-
-const readRanking = (id) => {
-  const ranking = JSON.parse(fs.readFileSync('json/ranking_' + getRankingName(id) + '.json', { encoding: 'utf-8' }));
+const readRanking = (name, rule) => {
+  const ranking = JSON.parse(fs.readFileSync('json/ranking_' + name + '_' + rule + '.json', { encoding: 'utf-8' }));
   return ranking;
 };
 
-const addEntry = (rankingID, params) => {
-  const ranking = readRanking(rankingID);
+const addEntry = (name, rule, params) => {
+  const ranking = readRanking(name, rule);
   let nextEntryID = 0;
   if (ranking.length > 0) {
     const lastEntry = _.max(ranking, (entry) => {
@@ -326,42 +315,51 @@ const addEntry = (rankingID, params) => {
     id: nextEntryID,
     dt: params.dt,
     name: params.name,
-    rule: params.rule,
     score: params.score,
+    time: params.time,
+    bet_times: params.bet_times,
+    max_combo: params.max_combo,
+    max_gain: params.max_gain,
+    average_gain: params.average_gain,
+    stats: params.stats,
     host: params.host,
     country: params.country,
     info: params.info,
     visible: params.visible,
   });
 
-  writeJSON('json/ranking_' + getRankingName(rankingID) + '.json', ranking);
-  // writeJSON('json/ranking_' + rankingID + '_bk.json', ranking);
+  writeJSON('json/ranking_' + name + '_' + rule + '.json', ranking);
   return ranking;
 };
 
-app.get('/api/rankings/:rankingID', (req, res) => {
-  const rankingID = Number(req.params.rankingID);
+app.get('/api/rankings/:gameName/:rule', (req, res) => {
+  const gameName = req.params.gameName;
+  const rule = req.params.rule;
 
-  const ranking = readRanking(rankingID);
+  const ranking = readRanking(gameName, rule);
   res.send(ranking);
 });
 
-app.post('/api/rankings/:rankingID/entries', (req, res) => {
-  const rankingID = Number(req.params.rankingID);
-
-  if (!hasValidInterval(rankingID, req.body.dt, req.headers.host)) {
-    return;
-  }
+app.post('/api/rankings/:gameName/:rule/entries', (req, res) => {
+  const gameName = req.params.gameName;
+  const rule = req.params.rule;
 
   if (isIgnore(req.body.name, req.headers.host, '')) {
     return;
   }
 
-  const ranking = addEntry(rankingID, {
+  const ranking = addEntry(gameName, rule, {
     dt: req.body.dt,
     name: req.body.name,
-    rule: req.body.rule,
     score: req.body.score,
+    time: req.body.time,
+    bet_times: req.body.bet_times,
+    max_combo: req.body.max_combo,
+    max_gain: req.body.max_gain,
+    average_gain: req.body.average_gain,
+    stats: req.body.stats,
+    userAgent: req.body.userAgent,
+    language: req.body.language,
     host: req.headers.host,
     country: iso3311a2.getCountry(req.body.info.country),
     info: req.body.info,
