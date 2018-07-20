@@ -2,7 +2,7 @@
 require 'webrick'
 
 server = WEBrick::HTTPServer.new({
-  DocumentRoot: './games/h-colour',
+  DocumentRoot: '.',
   BindAddress:  '0.0.0.0',
   Port:         3000,
 })

@@ -54,8 +54,17 @@ input[type="button"].button-primary:focus {
   border-color: white;
 }
 
-.wf-roundedmplus1c { font-family: "Rounded Mplus 1c"; }
+table.center td {
+  text-align: center;
+}
 
+td.strong {
+  color: yellow;
+  /* font-weight: 900; */
+  font-size: 1.8rem;
+}
+
+.wf-roundedmplus1c { font-family: "Rounded Mplus 1c"; }
 
 .section {
   padding: 8rem 0 7rem;
@@ -74,7 +83,6 @@ input[type="button"].button-primary:focus {
 .section-description {
   margin-bottom: 1.2rem;
 }
-
 
 #title {
   background-image: url('../images/background_first.jpg');
@@ -100,11 +108,11 @@ input[type="button"].button-primary:focus {
   color: #f8f8f8;
 }
 
-#screenshots .section-heading { 
+#screenshots .section-heading {
   margin-bottom: 2rem;
 }
 
-#screenshots .section-description { 
+#screenshots .section-description {
   margin-bottom: 4rem;
 }
 
@@ -182,7 +190,7 @@ input[type="button"].button-primary:focus {
   color: #f8f8f8;
 }
 
-#spec .section-description { 
+#spec .section-description {
   margin-bottom: 4rem;
 }
 
@@ -209,7 +217,7 @@ input[type="button"].button-primary:focus {
   color: #f8f8f8;
 }
 
-#contacts .section-description { 
+#contacts .section-description {
   margin-bottom: 4rem;
 }
 
@@ -238,6 +246,28 @@ input[type="button"].button-primary:focus {
 .contact-description {
   opacity: .8;
   font-weight: 300;
+}
+
+.h-colour_fore {
+  background-image: url('../images/background_yellow.jpg');
+  background-size: cover;
+}
+
+.h-colour_back {
+  background-image: url('../images/background_gray.jpg');
+  background-size: cover;
+  color: #f8f8f8;
+}
+
+.tin-tilo-rings_fore {
+  background-image: url('../images/background_yellow.jpg');
+  background-size: cover;
+}
+
+.tin-tilo-rings_back {
+  background-image: url('../images/background_gray.jpg');
+  background-size: cover;
+  color: #f8f8f8;
 }
 
 #back-to-top {
