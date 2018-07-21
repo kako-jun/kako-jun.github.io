@@ -6,10 +6,11 @@ var redrawEntries = function (gameName, rule) {
   var dfd = $.Deferred();
 
   $.ajax({
-    'url': serverRoot + 'api/rankings/' + gameName + '/' + rule,
-    'type': 'GET',
-    'cache': false,
-    'dataType': 'json',
+    url: serverRoot + 'api/rankings/' + gameName + '/' + rule,
+    type: 'GET',
+    cache: false,
+    // dataType: 'json',
+    dataType: 'jsonp',
   }).done(function (res) {
     var entries = res;
 
