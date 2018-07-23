@@ -57,7 +57,7 @@ var redrawEntries = function (gameName, rule) {
         break;
     }
   }).fail(function (res) {
-    alert(JSON.stringify(res));
+    // alert(JSON.stringify(res));
   }).always(function () {
     dfd.resolve();
   });
