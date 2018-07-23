@@ -1,6 +1,6 @@
 
 // var serverRoot = 'http://localhost:4201/';
-var serverRoot = 'http://35.185.242.164/';
+var serverRoot = 'https://the-system.llll-ll.com/';
 
 var redrawEntries = function (gameName, rule) {
   var dfd = $.Deferred();
