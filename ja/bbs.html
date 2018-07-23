@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <title>BBS</title>
+  <meta name='description' content='同人ゲーム'>
+  <meta name='author' content='kako-jun'>
+
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css' rel='stylesheet' />
+
+  <link rel='stylesheet' href='../assets/style/normalize.css'>
+  <link rel='stylesheet' href='../assets/style/skeleton.css'>
+  <link rel='stylesheet' href='../assets/style/custom.css'>
+
+  <link rel='icon' type='image/png' href='../assets/image/favicon_tin-tilo-rings.ico'>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-6167298560553798",
+      enable_page_level_ads: true
+    });
+  </script>
+</head>
+
+<body>
+  <div class='section tin-tilo-rings_fore'>
+    <div class='container'>
+      <h3 class='section-heading wf-roundedmplus1c'>BBS</h3>
+      <p class='section-description'>スレッド一覧</p>
+      <ul id='threads'>
+      </ul>
+    </div>
+  </div>
+
+  <div class='section tin-tilo-rings_back'>
+    <div class='container'>
+      <p class='section-description'>ルール1</p>
+      <h3 class='section-heading wf-roundedmplus1c'>得点を出すまでの時間を競う</h3>
+      <p class='section-description'>2943コース</p>
+      <div class='row'>
+        <div class='three colums'>&nbsp;</div>
+        <div class='six colums'>
+          <ul id='comments'>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='section tin-tilo-rings_fore'>
+    <div class='container'>
+      <h3 class='section-heading wf-roundedmplus1c'>BBS</h3>
+      <p class='section-description'>スレッド一覧</p>
+      <div id="comment-form">
+        <hr>
+        <h4>コメント投稿</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8 form-inline">
+              <input id="name" class="form-control input-sm" type="text" placeholder="ハンドルネーム / 名前" size="21">
+            </div>
+            <div class="col-xs-2"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8">
+              <textarea id="desc" class="form-control input-sm" placeholder="伝えたいこと&#13;&#10;&#13;&#10;  - 420字まで&#13;&#10;  - タグは使えません"
+                rows="8"></textarea>
+            </div>
+            <div class="col-xs-2"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8 form-inline">
+              <input id="quiz" class="form-control input-sm" type="text" placeholder="" size="21">
+            </div>
+            <div class="col-xs-2"></div>
+          </div>
+          <div class="text-center">
+            <button id="preview" class="btn btn-default">
+              <span class="glyphicon glyphicon-eye-open"></span> プレビュー</button>
+            <button id="send" class="btn btn-success">
+              <span class="glyphicon glyphicon-check"></span> 送信して後悔しない</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id='back-to-top' class='section'>
+    <a href='#top'>
+      <img src='../assets/image/jump_to_top.png'>
+    </a>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore-min.js"></script>
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <script src="../assets/js/bbs.js"></script>
+</body>
+
+</html>
