@@ -9,8 +9,8 @@ var redrawEntries = function (gameName, rule) {
     url: serverRoot + 'api/rankings/' + gameName + '/' + rule,
     type: 'GET',
     cache: false,
-    // dataType: 'json',
-    dataType: 'jsonp',
+    dataType: 'json',
+    // dataType: 'jsonp',
   }).done(function (res) {
     var entries = res;
 
