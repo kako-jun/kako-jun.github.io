@@ -85,7 +85,7 @@ td.strong {
 }
 
 #title {
-  background-image: url('../images/background_first.jpg');
+  background-image: url('../image/background_first.jpg');
   background-size: cover;
   color: #f8f8f8;
   padding-bottom: 7rem;
@@ -103,7 +103,7 @@ td.strong {
 }
 
 #screenshots {
-  background-image: url('../images/background_second.jpg');
+  background-image: url('../image/background_second.jpg');
   background-size: cover;
   color: #f8f8f8;
 }
@@ -123,7 +123,7 @@ td.strong {
 }
 
 #howto {
-  background-image: url('../images/background_yellow.jpg');
+  background-image: url('../image/background_yellow.jpg');
   background-size: cover;
   /* background: #FFF200; */
   /* border-bottom: 1px solid #ddd; */
@@ -185,7 +185,7 @@ td.strong {
 }
 
 #spec {
-  background-image: url('../images/background_gray.jpg');
+  background-image: url('../image/background_gray.jpg');
   background-size: cover;
   color: #f8f8f8;
 }
@@ -195,7 +195,7 @@ td.strong {
 }
 
 #walk {
-  background-image: url('../images/background_yellow.jpg');
+  background-image: url('../image/background_yellow.jpg');
   background-size: cover;
   /* background: #FFF200; */
   /* border-bottom: 1px solid #ddd; */
@@ -212,7 +212,7 @@ td.strong {
 }
 
 #contacts {
-  background-image: url('../images/background_last.jpg');
+  background-image: url('../image/background_last.jpg');
   background-size: cover;
   color: #f8f8f8;
 }
@@ -249,23 +249,23 @@ td.strong {
 }
 
 .h-colour_fore {
-  background-image: url('../images/background_yellow.jpg');
+  background-image: url('../image/background_yellow.jpg');
   background-size: cover;
 }
 
 .h-colour_back {
-  background-image: url('../images/background_gray.jpg');
+  background-image: url('../image/background_gray.jpg');
   background-size: cover;
   color: #f8f8f8;
 }
 
 .tin-tilo-rings_fore {
-  background-image: url('../images/background_yellow.jpg');
+  background-image: url('../image/background_yellow.jpg');
   background-size: cover;
 }
 
 .tin-tilo-rings_back {
-  background-image: url('../images/background_gray.jpg');
+  background-image: url('../image/background_gray.jpg');
   background-size: cover;
   color: #f8f8f8;
 }

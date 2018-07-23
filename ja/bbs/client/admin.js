@@ -1,5 +1,6 @@
 
-var serverRoot = 'http://localhost:4201/';
+// var serverRoot = 'http://localhost:4201/';
+var serverRoot = 'https://the-system.llll-ll.com/';
 var key = '42';
 
 var threads = [];
