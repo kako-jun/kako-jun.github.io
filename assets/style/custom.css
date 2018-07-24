@@ -259,6 +259,18 @@ td.strong {
   color: #f8f8f8;
 }
 
+.tin-tilo-rings_first {
+  background-image: url('../image/bg/bg_tin-tilo-rings_first.png');
+  background-size: cover;
+  color: #f8f8f8;
+}
+
+.tin-tilo-rings_second {
+  background-image: url('../image/bg/bg_tin-tilo-rings_second.png');
+  background-size: cover;
+  color: #f8f8f8;
+}
+
 .tin-tilo-rings_fore {
   background-image: url('../image/bg/bg_tin-tilo-rings_fore.png');
   background-size: cover;
@@ -267,6 +279,18 @@ td.strong {
 
 .tin-tilo-rings_back {
   background-image: url('../image/bg/bg_tin-tilo-rings_back.png');
+  background-size: cover;
+  color: #f8f8f8;
+}
+
+.h-colour_first {
+  background-image: url('../image/bg/bg_h-colour_first.png');
+  background-size: cover;
+  color: #f8f8f8;
+}
+
+.h-colour_second {
+  background-image: url('../image/bg/bg_h-colour_second.png');
   background-size: cover;
   color: #f8f8f8;
 }
