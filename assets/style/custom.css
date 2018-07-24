@@ -248,24 +248,47 @@ td.strong {
   font-weight: 300;
 }
 
-.h-colour_fore {
-  background-image: url('../image/background_yellow.jpg');
+.about_fore {
+  background-image: url('../image/bg/bg_about_fore.png');
   background-size: cover;
 }
 
-.h-colour_back {
-  background-image: url('../image/background_gray.jpg');
+.about_back {
+  background-image: url('../image/bg/bg_about_back.png');
   background-size: cover;
   color: #f8f8f8;
 }
 
 .tin-tilo-rings_fore {
-  background-image: url('../image/background_yellow.jpg');
+  background-image: url('../image/bg/bg_tin-tilo-rings_fore.png');
   background-size: cover;
+  color: #f8f8f8;
 }
 
 .tin-tilo-rings_back {
-  background-image: url('../image/background_gray.jpg');
+  background-image: url('../image/bg/bg_tin-tilo-rings_back.png');
+  background-size: cover;
+  color: #f8f8f8;
+}
+
+.h-colour_fore {
+  background-image: url('../image/bg/bg_h-colour_fore.png');
+  background-size: cover;
+}
+
+.h-colour_back {
+  background-image: url('../image/bg/bg_h-colour_back.png');
+  background-size: cover;
+  color: #f8f8f8;
+}
+
+.bbs_fore {
+  background-image: url('../image/bg/bg_bbs_fore.png');
+  background-size: cover;
+}
+
+.bbs_back {
+  background-image: url('../image/bg/bg_bbs_back.png');
   background-size: cover;
   color: #f8f8f8;
 }
