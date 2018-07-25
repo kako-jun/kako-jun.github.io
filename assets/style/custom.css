@@ -18,6 +18,11 @@ img {
   vertical-align: middle;
 }
 
+ul {
+  list-style: disc outside;
+  margin-bottom: 0px;
+}
+
 .button,
 button,
 input[type='submit'],
