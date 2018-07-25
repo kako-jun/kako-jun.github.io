@@ -9,10 +9,10 @@ var redrawThreads = function () {
   var dfd = $.Deferred();
 
   $.ajax({
-    'url': serverRoot + 'api/threads/comments',
-    'type': 'GET',
-    'cache': false,
-    'dataType': 'json',
+    url: serverRoot + 'api/threads/comments',
+    type: 'GET',
+    cache: false,
+    dataType: 'json',
   }).done(function (res) {
     threads = res;
 
@@ -130,16 +130,16 @@ $('#preview').on('click', function () {
     dataType: 'jsonp',
   }).done(function (res) {
     $.ajax({
-      'url': serverRoot + 'api/threads/' + threadID + '/comments/preview',
-      'data': {
+      url: serverRoot + 'api/threads/' + threadID + '/comments/preview',
+      data: {
         dt: dt,
         name: _.escape(name),
         desc: _.escape(desc),
         info: res,
       },
-      'type': 'POST',
-      'cache': false,
-      'dataType': 'json',
+      type: 'POST',
+      cache: false,
+      dataType: 'json',
     }).done(function (res) {
       redrawCommentsWithPreview(res);
     }).fail(function (res) {
@@ -195,16 +195,16 @@ $('#send').on('click', function () {
     dataType: 'jsonp',
   }).done(function (res) {
     $.ajax({
-      'url': serverRoot + 'api/threads/' + threadID + '/comments',
-      'data': {
+      url: serverRoot + 'api/threads/' + threadID + '/comments',
+      data: {
         dt: dt,
         name: _.escape(name),
         desc: _.escape(desc),
         info: res,
       },
-      'type': 'POST',
-      'cache': false,
-      'dataType': 'json',
+      type: 'POST',
+      cache: false,
+      dataType: 'json',
     }).done(function (res) {
       // alert(JSON.stringify(res));
       redrawThreads().always(function () {
