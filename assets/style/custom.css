@@ -125,12 +125,17 @@ td.strong {
   src: url('../font/JF-Dot-MPlusS10_WebSubsetFont_1.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'JF-Dot-MPlusS10B_WebSubsetFont_1';
+  src: url('../font/JF-Dot-MPlusS10B_WebSubsetFont_1.woff2') format('woff2');
+}
+
 .dot { font-family: 'JF-Dot-MPlusS10_WebSubsetFont_1'; }
+.dot-b { font-family: 'JF-Dot-MPlusS10B_WebSubsetFont_1'; }
 
 .mini {
   font-size: 1.2rem;
 }
-
 
 .section {
   padding: 8rem 0 7rem;
@@ -270,7 +275,17 @@ td.strong {
   margin-top: 80px;
 }
 
+#date {
+  font-size: 2rem;
+}
+
 .weather {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+}
+
+#weather {
   width: 2rem;
   height: 2rem;
   vertical-align: middle;
@@ -413,14 +428,12 @@ td.strong {
   background: black;
 }
 
-#back-to-top a
- {
+#back-to-top a {
   opacity: .8;
 }
 
 #back-to-top a:hover,
-#back-to-top a:focus
- {
+#back-to-top a:focus {
   opacity: 1;
 }
 
