@@ -1,6 +1,6 @@
 
-var serverRoot = 'http://localhost:4201/';
-// var serverRoot = 'https://the-system.llll-ll.com/';
+// var serverRoot = 'http://localhost:4201/';
+var serverRoot = 'https://the-system.llll-ll.com/';
 
 var redrawCounter = function () {
   var dfd = $.Deferred();
