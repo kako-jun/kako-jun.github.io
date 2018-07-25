@@ -1,6 +1,7 @@
 
 body {
   font-family: 'Comfortaa', cursive;
+  overflow-x: hidden;
 }
 
 a {
@@ -130,8 +131,15 @@ td.strong {
   src: url('../font/JF-Dot-MPlusS10B_WebSubsetFont_1.woff2') format('woff2');
 }
 
-.dot { font-family: 'JF-Dot-MPlusS10_WebSubsetFont_1'; }
-.dot-b { font-family: 'JF-Dot-MPlusS10B_WebSubsetFont_1'; }
+.dot {
+  font-family: 'JF-Dot-MPlusS10_WebSubsetFont_1';
+  /* font-smoothing: none; */
+}
+
+.dot-b {
+  font-family: 'JF-Dot-MPlusS10B_WebSubsetFont_1';
+  /* font-smoothing: none; */
+}
 
 .mini {
   font-size: 1.2rem;
@@ -329,6 +337,8 @@ td.strong {
 }
 
 #top-image {
+  max-width: 100%;
+  height: auto;
 }
 
 #counter {
@@ -437,6 +447,9 @@ td.strong {
   opacity: 1;
 }
 
+.pc-table { display: none; }
+.phone-table { display: table; }
+
 /* Bigger than 550 */
 @media (min-width: 550px) {
   .four.columns  {
@@ -466,6 +479,8 @@ td.strong {
     max-height: 362px;
     z-index: 30;
   }
+  .pc-table { display: table; }
+  .phone-table { display: none; }
 }
 
 /* Bigger than 750 */
