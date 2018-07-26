@@ -1,11 +1,11 @@
 
-var Rule = {
+const Rule = {
 
-  shuffle: function (array) {
-    var n = array.length, t, i;
+  shuffle: (array) => {
+    let n = array.length;
     while (n) {
-      i = Math.floor(Math.random() * n--);
-      t = array[n];
+      let i = Math.floor(Math.random() * n--);
+      let t = array[n];
       array[n] = array[i];
       array[i] = t;
     }
@@ -13,58 +13,58 @@ var Rule = {
     return array;
   },
 
-  getReaches: function (eyes1, eyes2) {
-    var reaches = [];
+  getReaches: (eyes1, eyes2) => {
+    const reaches = [];
 
-    _.times(11, function (i) {
-      var alphabet = String.fromCharCode(97 + i)
+    _.times(11, (i) => {
+      const alphabet = String.fromCharCode(97 + i)
 
-      var eye1 = 0;
-      var eye2 = 0;
+      let eye1 = 0;
+      let eye2 = 0;
       switch (alphabet) {
         case 'a':
-          var eye1 = eyes1[0];
-          var eye2 = eyes2[0];
+          eye1 = eyes1[0];
+          eye2 = eyes2[0];
           break;
         case 'b':
-          var eye1 = eyes1[1];
-          var eye2 = eyes2[1];
+          eye1 = eyes1[1];
+          eye2 = eyes2[1];
           break;
         case 'c':
-          var eye1 = eyes1[2];
-          var eye2 = eyes2[2];
+          eye1 = eyes1[2];
+          eye2 = eyes2[2];
           break;
         case 'd':
-          var eye1 = eyes1[3];
-          var eye2 = eyes2[3];
+          eye1 = eyes1[3];
+          eye2 = eyes2[3];
           break;
         case 'e':
-          var eye1 = eyes1[4];
-          var eye2 = eyes2[4];
+          eye1 = eyes1[4];
+          eye2 = eyes2[4];
           break;
         case 'f':
-          var eye1 = eyes1[2];
-          var eye2 = eyes2[1];
+          eye1 = eyes1[2];
+          eye2 = eyes2[1];
           break;
         case 'g':
-          var eye1 = eyes1[3];
-          var eye2 = eyes2[2];
+          eye1 = eyes1[3];
+          eye2 = eyes2[2];
           break;
         case 'h':
-          var eye1 = eyes1[4];
-          var eye2 = eyes2[3];
+          eye1 = eyes1[4];
+          eye2 = eyes2[3];
           break;
         case 'i':
-          var eye1 = eyes1[0];
-          var eye2 = eyes2[1];
+          eye1 = eyes1[0];
+          eye2 = eyes2[1];
           break;
         case 'j':
-          var eye1 = eyes1[1];
-          var eye2 = eyes2[2];
+          eye1 = eyes1[1];
+          eye2 = eyes2[2];
           break;
         case 'k':
-          var eye1 = eyes1[2];
-          var eye2 = eyes2[3];
+          eye1 = eyes1[2];
+          eye2 = eyes2[3];
           break;
       }
 
@@ -97,58 +97,58 @@ var Rule = {
     return reaches;
   },
 
-  getZoneReaches: function (eyes1, eyes2) {
-    var reaches = [];
+  getZoneReaches: (eyes1, eyes2) => {
+    const reaches = [];
 
-    _.times(11, function (i) {
-      var alphabet = String.fromCharCode(97 + i)
+    _.times(11, (i) => {
+      const alphabet = String.fromCharCode(97 + i)
 
-      var eye1 = 0;
-      var eye2 = 0;
+      let eye1 = 0;
+      let eye2 = 0;
       switch (alphabet) {
         case 'a':
-          var eye1 = eyes1[0];
-          var eye2 = eyes2[0];
+          eye1 = eyes1[0];
+          eye2 = eyes2[0];
           break;
         case 'b':
-          var eye1 = eyes1[1];
-          var eye2 = eyes2[1];
+          eye1 = eyes1[1];
+          eye2 = eyes2[1];
           break;
         case 'c':
-          var eye1 = eyes1[2];
-          var eye2 = eyes2[2];
+          eye1 = eyes1[2];
+          eye2 = eyes2[2];
           break;
         case 'd':
-          var eye1 = eyes1[3];
-          var eye2 = eyes2[3];
+          eye1 = eyes1[3];
+          eye2 = eyes2[3];
           break;
         case 'e':
-          var eye1 = eyes1[4];
-          var eye2 = eyes2[4];
+          eye1 = eyes1[4];
+          eye2 = eyes2[4];
           break;
         case 'f':
-          var eye1 = eyes1[2];
-          var eye2 = eyes2[1];
+          eye1 = eyes1[2];
+          eye2 = eyes2[1];
           break;
         case 'g':
-          var eye1 = eyes1[3];
-          var eye2 = eyes2[2];
+          eye1 = eyes1[3];
+          eye2 = eyes2[2];
           break;
         case 'h':
-          var eye1 = eyes1[4];
-          var eye2 = eyes2[3];
+          eye1 = eyes1[4];
+          eye2 = eyes2[3];
           break;
         case 'i':
-          var eye1 = eyes1[0];
-          var eye2 = eyes2[1];
+          eye1 = eyes1[0];
+          eye2 = eyes2[1];
           break;
         case 'j':
-          var eye1 = eyes1[1];
-          var eye2 = eyes2[2];
+          eye1 = eyes1[1];
+          eye2 = eyes2[2];
           break;
         case 'k':
-          var eye1 = eyes1[2];
-          var eye2 = eyes2[3];
+          eye1 = eyes1[2];
+          eye2 = eyes2[3];
           break;
       }
 
@@ -176,8 +176,8 @@ var Rule = {
     return reaches;
   },
 
-  calcTuples: function (eyes1, eyes2, eyes3) {
-    var tuples = [
+  calcTuples: (eyes1, eyes2, eyes3) => {
+    const tuples = [
       [eyes1[0], eyes2[0], eyes3[0]],
       [eyes1[1], eyes2[1], eyes3[1]],
       [eyes1[2], eyes2[2], eyes3[2]],
@@ -194,10 +194,10 @@ var Rule = {
     return tuples;
   },
 
-  getZoneRolls: function (tuples) {
-    var rolls = [];
+  getZoneRolls: (tuples) => {
+    const rolls = [];
 
-    _.each(tuples, function (tuple) {
+    _.each(tuples, (tuple) => {
       if (tuple[0] === 1 && tuple[1] === 1 && tuple[2] === 0) {
         rolls.push('110');
       } else if (tuple[0] === 3 && tuple[1] === 5 && tuple[2] === 9) {
@@ -222,9 +222,9 @@ var Rule = {
     return rolls;
   },
 
-  isAmbulance: function (tuples) {
-    var founds = _.map(tuples, function (tuple) {
-      var eye = '' + tuple[0] + tuple[1] + tuple[2];
+  isAmbulance: (tuples) => {
+    const founds = _.map(tuples, (tuple) => {
+      const eye = '' + tuple[0] + tuple[1] + tuple[2];
       switch (eye) {
         case '119':
         case '911':
@@ -239,17 +239,17 @@ var Rule = {
     return _.some(founds);
   },
 
-  calcMods: function (tuples) {
-    var mods = _.map(tuples, function (tuple) {
+  calcMods: (tuples) => {
+    const mods = _.map(tuples, (tuple) => {
       return (tuple[0] + tuple[1] + tuple[2]) % 10;
     });
 
     return mods;
   },
 
-  calcScores: function (tuples, mods, revolution) {
-    var scores = [];
-    _.times(11, function (i) {
+  calcScores: (tuples, mods, revolution) => {
+    const scores = [];
+    _.times(11, (i) => {
       scores.push({
         id: String.fromCharCode(97 + i),
         eye: '' + tuples[i][0] + tuples[i][1] + tuples[i][2],
@@ -260,11 +260,11 @@ var Rule = {
       });
     });
 
-    _.each(tuples, function (tuple, i) {
-      var score = scores[i];
-      var mod = mods[i];
+    _.each(tuples, (tuple, i) => {
+      const score = scores[i];
+      const mod = mods[i];
 
-      _.each(_g.RollTableMulti, function (roll) {
+      _.each(RollTableMulti, (roll) => {
         if (!score.won) {
           if (roll.judge(tuple, mod)) {
             score.won = true;
@@ -274,11 +274,11 @@ var Rule = {
       });
     });
 
-    _.each(tuples, function (tuple, i) {
-      var score = scores[i];
-      var mod = mods[i];
+    _.each(tuples, (tuple, i) => {
+      const score = scores[i];
+      const mod = mods[i];
 
-      _.each(_g.RollTableMe, function (roll) {
+      _.each(RollTableMe, (roll) => {
         if (!score.won) {
           if (roll.judge(tuple, mod)) {
             score.won = true;
@@ -288,11 +288,11 @@ var Rule = {
       });
     });
 
-    _.each(tuples, function (tuple, i) {
-      var score = scores[i];
-      var mod = mods[i];
+    _.each(tuples, (tuple, i) => {
+      const score = scores[i];
+      const mod = mods[i];
 
-      _.each(_g.RollTableKabu, function (roll) {
+      _.each(RollTableKabu, (roll) => {
         if (!score.won) {
           if (roll.judge(tuple, mod)) {
             score.won = true;
@@ -302,11 +302,11 @@ var Rule = {
       });
     });
 
-    var sum = 0;
-    _.each(scores, function (score) {
+    let sum = 0;
+    _.each(scores, (score) => {
       if (score.won) {
         if (Rule.getStep(score) === 'me') {
-          var gain = score.roll.calcGain(sum, score.tuple, score.mod);
+          const gain = score.roll.calcGain(sum, score.tuple, score.mod);
           sum += gain;
 
           score.gain = gain;
@@ -315,10 +315,10 @@ var Rule = {
       }
     });
 
-    _.each(scores, function (score) {
+    _.each(scores, (score) => {
       if (score.won) {
         if (Rule.getStep(score) === 'kabu') {
-          var gain = score.roll.calcGain(sum, score.tuple, score.mod);
+          const gain = score.roll.calcGain(sum, score.tuple, score.mod);
           sum += gain;
 
           score.gain = gain;
@@ -331,10 +331,10 @@ var Rule = {
       sum = 1;
     }
 
-    _.each(scores, function (score) {
+    _.each(scores, (score) => {
       if (score.won) {
         if (Rule.getStep(score) === 'multi') {
-          var gain = score.roll.calcGain(sum, score.tuple, score.mod);
+          let gain = score.roll.calcGain(sum, score.tuple, score.mod);
 
           if (gain > 9999) {
             gain = 9999;
@@ -357,8 +357,8 @@ var Rule = {
     return scores;
   },
 
-  calcCurrentScores: function (scores, i_combo) {
-    var me_scores = _.filter(scores, function (score) {
+  calcCurrentScores: (scores, i_combo) => {
+    const me_scores = _.filter(scores, (score) => {
       if (score.won) {
         if (Rule.getStep(score) === 'me') {
           return true;
@@ -368,14 +368,14 @@ var Rule = {
       return false;
     });
 
-    var me_sum = 0;
+    let me_sum = 0;
     if (me_scores.length > 0) {
-      me_sum = _.max(me_scores, function (score) {
+      me_sum = _.max(me_scores, (score) => {
         return score.sum;
       }).sum;
     }
 
-    var kabu_scores = _.filter(scores, function (score) {
+    const kabu_scores = _.filter(scores, (score) => {
       if (score.won) {
         if (Rule.getStep(score) === 'kabu') {
           return true;
@@ -385,14 +385,14 @@ var Rule = {
       return false;
     });
 
-    var kabu_sum = me_sum;
+    let kabu_sum = me_sum;
     if (kabu_scores.length > 0) {
-      kabu_sum = _.max(kabu_scores, function (score) {
+      kabu_sum = _.max(kabu_scores, (score) => {
         return score.sum;
       }).sum;
     }
 
-    var multi_scores = _.filter(scores, function (score) {
+    const multi_scores = _.filter(scores, (score) => {
       if (score.won) {
         if (Rule.getStep(score) === 'multi') {
           return true;
@@ -402,20 +402,22 @@ var Rule = {
       return false;
     });
 
-    var multi_sum = kabu_sum;
+    let multi_sum = kabu_sum;
     if (multi_scores.length > 0) {
-      multi_sum = _.max(multi_scores, function (score) {
-        return Math.abs(score.sum);
-      }).sum;
+      multi_sum = _.last(multi_scores).sum;
     }
 
     return [me_sum, kabu_sum, multi_sum, 0];
   },
 
-  addComboScore: function (current_scores, i_combo) {
-    var combo_sum = current_scores[2];
+  addComboScore: (current_scores, i_combo) => {
+    let combo_sum = current_scores[2];
     if (i_combo >= 2) {
-      combo_sum *= i_combo;
+      if (i_combo > 10) {
+        combo_sum *= 10;
+      } else {
+        combo_sum *= i_combo;
+      }
 
       if (combo_sum > 9999) {
         combo_sum = 9999;
@@ -427,12 +429,12 @@ var Rule = {
     return [current_scores[0], current_scores[1], current_scores[2], combo_sum];
   },
 
-  calcTotalScore: function (total_score, current_scores) {
+  calcTotalScore: (total_score, current_scores) => {
     return total_score + current_scores[3];
   },
 
-  isMultiWon: function (scores) {
-    var founds = _.map(scores, function (score) {
+  isMultiWon: (scores) => {
+    const founds = _.map(scores, (score) => {
       if (score.won && score.roll.f === 'multi') {
         return true;
       }
@@ -443,12 +445,12 @@ var Rule = {
     return _.some(founds);
   },
 
-  isTripleSeven: function (scores) {
-    var rolls = _.map(scores, function (score) {
+  isTripleSeven: (scores) => {
+    const rolls = _.map(scores, (score) => {
       return score.roll;
     });
 
-    var found = _.find(rolls, function (roll) {
+    const found = _.find(rolls, (roll) => {
       return roll.name === 'triple_seven';
     });
 
@@ -459,12 +461,77 @@ var Rule = {
     return false;
   },
 
-  isPinkRibbon: function (scores) {
-    var rolls = _.map(scores, function (score) {
+  getTripleSevenEffect: (rollback_stock, stats) => {
+    let ring1_ns = Rule.shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    let ring2_ns = Rule.shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    let ring3_ns = Rule.shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
+    const r = _.random(0, 99);
+    if (r < 5) {
+      // 5%
+      ring1_ns = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+      ring2_ns = ring1_ns;
+      ring3_ns = ring1_ns;
+      stats.triple_seven.all_1++;
+    } else if (r < 10) {
+      // 5%
+      ring1_ns = [6, 6, 6, 6, 6, 6, 6, 6, 6, 6];
+      ring2_ns = ring1_ns;
+      ring3_ns = ring1_ns;
+      stats.triple_seven.all_6++;
+    } else if (r < 15) {
+      // 5%
+      ring1_ns = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      ring2_ns = ring1_ns;
+      ring3_ns = ring1_ns;
+      stats.triple_seven.triplets++;
+    } else if (r < 20) {
+      // 5%
+      ring1_ns = Rule.shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+      ring2_ns = ring1_ns;
+      ring3_ns = ring1_ns;
+      stats.triple_seven.triplets++;
+    } else if (r < 30) {
+      // 10%
+      ring1_ns = _.union(Rule.shuffle([0, 1, 2, 3, 4, 5, 6]), [7, 8, 9]);
+      ring2_ns = _.union(Rule.shuffle([0, 1, 2, 3, 4, 5, 6]), [7, 8, 9]);
+      ring3_ns = _.union(Rule.shuffle([0, 1, 2, 3, 4, 5, 6]), [7, 8, 9]);
+      stats.triple_seven.others++;
+    } else if (r < 40) {
+      // 10%
+      ring1_ns = Rule.shuffle([1, 2, 3, 1, 2, 3, 1, 2, 3, 1]);
+      ring2_ns = Rule.shuffle([1, 2, 3, 1, 2, 3, 1, 2, 3, 1]);
+      ring3_ns = Rule.shuffle([1, 2, 3, 1, 2, 3, 1, 2, 3, 1]);
+      stats.triple_seven.all_123++;
+    } else if (r < 50) {
+      // 10%
+      ring1_ns = Rule.shuffle([4, 5, 6, 4, 5, 6, 4, 5, 6, 6]);
+      ring2_ns = Rule.shuffle([4, 5, 6, 4, 5, 6, 4, 5, 6, 6]);
+      ring3_ns = Rule.shuffle([4, 5, 6, 4, 5, 6, 4, 5, 6, 6]);
+      stats.triple_seven.all_456++;
+    } else {
+      // 50%
+      rollback_stock++;
+      if (rollback_stock > 3) {
+        rollback_stock = 1;
+      }
+    }
+
+    return {
+      ring1_ns: ring1_ns,
+      ring2_ns: ring2_ns,
+      ring3_ns: ring3_ns,
+      rollback_stock: rollback_stock,
+      stats: stats,
+    };
+  },
+
+  isPinkRibbon: (scores) => {
+    const rolls = _.map(scores, (score) => {
       return score.roll;
     });
 
-    var found = _.find(rolls, function (roll) {
+    const found = _.find(rolls, (roll) => {
       return roll.name === 'pink_ribbon';
     });
 
@@ -475,7 +542,7 @@ var Rule = {
     return false;
   },
 
-  getStep: function (score) {
+  getStep: (score) => {
     if (score.roll.name === 'pink_ribbon' || score.roll.name === 'pinbasami' || score.roll.name === 'me') {
       return 'me';
     } else if (score.roll.f === 'add') {
@@ -485,8 +552,8 @@ var Rule = {
     }
   },
 
-  getNextSpeed: function (speed, current_score) {
-    var next_speed = speed;
+  getNextSpeed: (speed, current_score) => {
+    let next_speed = speed;
     if (current_score < 0) {
       // -∞ - -1
       if (speed < 2) {
@@ -567,7 +634,8 @@ var Rule = {
     return next_speed;
   },
 
-  getTime: function (rule, i_second_1) {
+  getTime: (rule, i_second_1) => {
+    let left = 0;
     switch (rule) {
       case 'rule_1_2943':
       case 'rule_1_8390':
@@ -575,23 +643,28 @@ var Rule = {
       case 'rule_2_2943':
       case 'rule_2_8390':
       case 'rule_2_37654':
-        return i_second_1;
+        left = i_second_1;
+        if (left < 0) {
+          left = 0;
+        }
+
+        return left;
       case 'rule_3_0409':
-        var left = (60 * 4 + 9) - i_second_1;
+        left = (60 * 4 + 9) - i_second_1;
         if (left < 0) {
           left = 0;
         }
 
         return left;
       case 'rule_3_2009':
-        var left = (60 * 20 + 9) - i_second_1;
+        left = (60 * 20 + 9) - i_second_1;
         if (left < 0) {
           left = 0;
         }
 
         return left;
       case 'rule_3_6819':
-        var left = (60 * 68 + 19) - i_second_1;
+        left = (60 * 68 + 19) - i_second_1;
         if (left < 0) {
           left = 0;
         }
@@ -600,11 +673,12 @@ var Rule = {
     }
   },
 
-  isAchieved: function (rule, elapsed_time, total_score) {
+  isAchieved: (rule, elapsed_time, total_score) => {
     switch (rule) {
       case 'rule_1_2943':
       case 'rule_2_2943':
         if (total_score >= 2943) {
+          // if (total_score >= 1) {
           return true;
         }
         break;
@@ -622,6 +696,7 @@ var Rule = {
         break;
       case 'rule_3_0409':
         if (elapsed_time >= (60 * 4 + 9) * 1000) {
+          // if (elapsed_time >= 1 * 1000) {
           return true;
         }
         break;
@@ -638,6 +713,12 @@ var Rule = {
     }
 
     return false;
+  },
+
+  updateStats: (before, value) => {
+    if (value > before) {
+      before = value;
+    }
   },
 
 };
