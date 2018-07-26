@@ -26,7 +26,7 @@ const redrawEntries = (gameName, rule) => {
         $('#' + rule + ' .entry').remove();
         _.each(sorted, (entry, i) => {
           const rank = i + 1;
-          $('#' + rule).append('<tr class="entry"><td>' + rank + '</td><td>' + entry.name + '</td><td class="strong">' + entry.time + '</td><td>' + entry.max_combo + '</td><td>' + entry.max_gain + '</td><td>' + entry.average_gain + '</td><td>' + entry.env + '</td><td>' + entry.language + '</td></tr>');
+          $('#' + rule).append('<tr class="entry"><td>' + rank + '</td><td>' + entry.name + '</td><td class="strong">' + entry.time + '</td><td>' + entry.max_combo + '</td><td>' + entry.max_gain + '</td><td>' + entry.average_gain + '</td><td>' + entry.env + '</td><td>' + entry.locale + '</td></tr>');
         });
         break;
       case 'rule_2_2943':
@@ -39,7 +39,7 @@ const redrawEntries = (gameName, rule) => {
         $('#' + rule + ' .entry').remove();
         _.each(sorted, (entry, i) => {
           const rank = i + 1;
-          $('#' + rule).append('<tr class="entry"><td>' + rank + '</td><td>' + entry.name + '</td><td class="strong">' + entry.bet_times + '</td><td>' + entry.max_combo + '</td><td>' + entry.max_gain + '</td><td>' + entry.average_gain + '</td><td>' + entry.env + '</td><td>' + entry.language + '</td></tr>');
+          $('#' + rule).append('<tr class="entry"><td>' + rank + '</td><td>' + entry.name + '</td><td class="strong">' + entry.bet_times + '</td><td>' + entry.max_combo + '</td><td>' + entry.max_gain + '</td><td>' + entry.average_gain + '</td><td>' + entry.env + '</td><td>' + entry.locale + '</td></tr>');
         });
         break;
       case 'rule_3_0409':
@@ -52,7 +52,7 @@ const redrawEntries = (gameName, rule) => {
         $('#' + rule + ' .entry').remove();
         _.each(sorted, (entry, i) => {
           const rank = i + 1;
-          $('#' + rule).append('<tr class="entry"><td>' + rank + '</td><td>' + entry.name + '</td><td class="strong">' + entry.score + '</td><td>' + entry.max_combo + '</td><td>' + entry.max_gain + '</td><td>' + entry.average_gain + '</td><td>' + entry.env + '</td><td>' + entry.language + '</td></tr>');
+          $('#' + rule).append('<tr class="entry"><td>' + rank + '</td><td>' + entry.name + '</td><td class="strong">' + entry.score + '</td><td>' + entry.max_combo + '</td><td>' + entry.max_gain + '</td><td>' + entry.average_gain + '</td><td>' + entry.env + '</td><td>' + entry.locale + '</td></tr>');
         });
         break;
     }
