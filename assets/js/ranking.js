@@ -26,7 +26,7 @@ const redrawEntries = (gameName, rule) => {
         $('#' + rule + ' .entry').remove();
         _.each(sorted, (entry, i) => {
           const rank = i + 1;
-          $('#' + rule).append('<tr class="entry"><td>' + rank + '</td><td>' + entry.name + '</td><td class="strong">' + entry.time + '</td><td>' + entry.max_combo + '</td><td>' + entry.max_gain + '</td><td>' + entry.average_gain + '</td><td>' + entry.userAgent + '</td><td>' + entry.language + '</td></tr>');
+          $('#' + rule).append('<tr class="entry"><td>' + rank + '</td><td>' + entry.name + '</td><td class="strong">' + entry.time + '</td><td>' + entry.max_combo + '</td><td>' + entry.max_gain + '</td><td>' + entry.average_gain + '</td><td>' + entry.env + '</td><td>' + entry.language + '</td></tr>');
         });
         break;
       case 'rule_2_2943':
@@ -39,7 +39,7 @@ const redrawEntries = (gameName, rule) => {
         $('#' + rule + ' .entry').remove();
         _.each(sorted, (entry, i) => {
           const rank = i + 1;
-          $('#' + rule).append('<tr class="entry"><td>' + rank + '</td><td>' + entry.name + '</td><td class="strong">' + entry.bet_times + '</td><td>' + entry.max_combo + '</td><td>' + entry.max_gain + '</td><td>' + entry.average_gain + '</td><td>' + entry.userAgent + '</td><td>' + entry.language + '</td></tr>');
+          $('#' + rule).append('<tr class="entry"><td>' + rank + '</td><td>' + entry.name + '</td><td class="strong">' + entry.bet_times + '</td><td>' + entry.max_combo + '</td><td>' + entry.max_gain + '</td><td>' + entry.average_gain + '</td><td>' + entry.env + '</td><td>' + entry.language + '</td></tr>');
         });
         break;
       case 'rule_3_0409':
@@ -52,7 +52,7 @@ const redrawEntries = (gameName, rule) => {
         $('#' + rule + ' .entry').remove();
         _.each(sorted, (entry, i) => {
           const rank = i + 1;
-          $('#' + rule).append('<tr class="entry"><td>' + rank + '</td><td>' + entry.name + '</td><td class="strong">' + entry.score + '</td><td>' + entry.max_combo + '</td><td>' + entry.max_gain + '</td><td>' + entry.average_gain + '</td><td>' + entry.userAgent + '</td><td>' + entry.language + '</td></tr>');
+          $('#' + rule).append('<tr class="entry"><td>' + rank + '</td><td>' + entry.name + '</td><td class="strong">' + entry.score + '</td><td>' + entry.max_combo + '</td><td>' + entry.max_gain + '</td><td>' + entry.average_gain + '</td><td>' + entry.env + '</td><td>' + entry.language + '</td></tr>');
         });
         break;
     }
@@ -67,6 +67,12 @@ const redrawEntries = (gameName, rule) => {
 
 $(() => {
   redrawEntries('tin-tilo-rings', 'rule_1_2943');
+  redrawEntries('tin-tilo-rings', 'rule_1_8390');
+  redrawEntries('tin-tilo-rings', 'rule_1_37654');
   redrawEntries('tin-tilo-rings', 'rule_2_2943');
+  redrawEntries('tin-tilo-rings', 'rule_2_8390');
+  redrawEntries('tin-tilo-rings', 'rule_2_37654');
   redrawEntries('tin-tilo-rings', 'rule_3_0409');
+  redrawEntries('tin-tilo-rings', 'rule_3_2009');
+  redrawEntries('tin-tilo-rings', 'rule_3_6819');
 });
