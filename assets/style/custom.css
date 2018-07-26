@@ -456,6 +456,7 @@ td.strong {
   position: absolute;
   top: 0;
   z-index: 999;
+  margin-left: 8px;
 }
 
 #back-to-top {
@@ -463,12 +464,11 @@ td.strong {
 }
 
 #back-to-top a {
-  opacity: .8;
+  font-size: 8rem;
 }
 
 #back-to-top a:hover,
 #back-to-top a:focus {
-  opacity: 1;
 }
 
 .pc-table { display: none; }
