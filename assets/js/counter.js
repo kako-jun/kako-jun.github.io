@@ -1,9 +1,9 @@
 
-// var serverRoot = 'http://localhost:4201/';
-var serverRoot = 'https://the-system.llll-ll.com/';
+// const serverRoot = 'http://localhost:4201/';
+const serverRoot = 'https://the-system.llll-ll.com/';
 
-var redrawCounter = function () {
-  var dfd = $.Deferred();
+const redrawCounter = () => {
+  const dfd = $.Deferred();
 
   $.ajax({
     url: serverRoot + 'api/counter',
@@ -11,18 +11,18 @@ var redrawCounter = function () {
     cache: false,
     dataType: 'json',
     // dataType: 'jsonp',
-  }).done(function (res) {
-    var counter = res;
+  }).done((res) => {
+    const counter = res;
     $('#counter').text(counter.total);
-  }).fail(function (res) {
+  }).fail((res) => {
     // alert(JSON.stringify(res));
-  }).always(function () {
+  }).always(() => {
     dfd.resolve();
   });
 
   return dfd.promise();
 };
 
-$(function () {
+$(() => {
   redrawCounter();
 });

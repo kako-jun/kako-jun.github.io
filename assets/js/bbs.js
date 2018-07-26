@@ -1,45 +1,45 @@
 
-// var serverRoot = 'http://localhost:4201/';
-var serverRoot = 'https://the-system.llll-ll.com/';
+// const serverRoot = 'http://localhost:4201/';
+const serverRoot = 'https://the-system.llll-ll.com/';
 
-var threads = [];
-var threadID = 0;
+let threads = [];
+let threadID = 0;
 
-var redrawThreads = function () {
-  var dfd = $.Deferred();
+const redrawThreads = () => {
+  const dfd = $.Deferred();
 
   $.ajax({
     url: serverRoot + 'api/threads/comments',
     type: 'GET',
     cache: false,
     dataType: 'json',
-  }).done(function (res) {
+  }).done((res) => {
     threads = res;
 
     $('#threads').empty();
-    _.each(threads, function (thread) {
+    _.each(threads, (thread) => {
       $('#threads').append('<li value="' + thread.id + '">' + thread.title.ja + ' ' + thread.desc.ja + ' ---- ' + thread.comments.length + ' コメント (承認待ち ' + thread.invisible_num + ')</li>');
     });
-  }).fail(function (res) {
+  }).fail((res) => {
     // alert(JSON.stringify(res));
     alert('スレッド一覧の取得に失敗');
-  }).always(function () {
+  }).always(() => {
     dfd.resolve();
   });
 
   return dfd.promise();
 };
 
-var redrawComments = function (threadID) {
-  var found = _.find(threads, function (thread) {
+const redrawComments = (threadID) => {
+  const found = _.find(threads, (thread) => {
     return (thread.id === threadID);
   });
 
-  var comments = found.comments;
+  const comments = found.comments;
 
   $('#comments').empty();
 
-  _.each(comments, function (comment) {
+  _.each(comments, (comment) => {
     if (comment.visible) {
       $('#comments').append('<li value="' + comment.id + '">' + comment.id + '<br>' + comment.name + '<br>' + comment.dt + '<br>' + comment.country + '<br>' + comment.desc + '</li>');
     }
@@ -51,20 +51,20 @@ var redrawComments = function (threadID) {
   generateQuiz();
 };
 
-var redrawCommentsWithPreview = function (thread) {
-  var comments = thread.comments;
+const redrawCommentsWithPreview = (thread) => {
+  const comments = thread.comments;
 
   $('#comments').empty();
 
-  _.each(comments, function (comment) {
+  _.each(comments, (comment) => {
     if (comment.visible) {
       $('#comments').append('<li value="' + comment.id + '">' + comment.id + '<br>' + comment.name + '<br>' + comment.dt + '<br>' + comment.country + '<br>' + comment.desc + '</li>');
     }
   });
 };
 
-var generateQuiz = function () {
-  var qs = [
+const generateQuiz = () => {
+  const qs = [
     '40 + 2 = ?',
     '41 + 1 = ?',
     '43 - 1 = ?',
@@ -76,11 +76,11 @@ var generateQuiz = function () {
     '100 + 42 - 100 = ?',
   ];
 
-  var i = _.random(0, 8);
-  $('#comment-form #quiz').attr('placeholder', qs[i]);
+  const i = _.random(0, 8);
+  $('#comment-form #quiz').attr('placeholder', ' ' + qs[i]);
 };
 
-$(function () {
+$(() => {
   $('#comment-form').hide();
 
   redrawThreads();
@@ -94,8 +94,8 @@ $('#threads').on('click', 'li', function () {
 });
 
 $('#preview').on('click', function () {
-  var name = $('#comment-form #name').val();
-  var desc = $('#comment-form #desc').val();
+  let name = $('#comment-form #name').val();
+  const desc = $('#comment-form #desc').val();
 
   if (name.length > 42) {
     alert('名前は42文字まで');
@@ -116,19 +116,19 @@ $('#preview').on('click', function () {
     name = '無色透明さん';
   }
 
-  var now = new Date();
-  var year = now.getFullYear();
-  var mon = ('00' + (now.getMonth() + 1)).slice(-2);
-  var date = ('00' + now.getDate()).slice(-2);
-  var hour = ('00' + now.getHours()).slice(-2);
-  var min = ('00' + now.getMinutes()).slice(-2);
-  var sec = ('00' + now.getSeconds()).slice(-2);
-  var dt = year + '-' + mon + '-' + date + ' ' + hour + ':' + min + ':' + sec;
+  const now = new Date();
+  const year = now.getFullYear();
+  const mon = ('00' + (now.getMonth() + 1)).slice(-2);
+  const date = ('00' + now.getDate()).slice(-2);
+  const hour = ('00' + now.getHours()).slice(-2);
+  const min = ('00' + now.getMinutes()).slice(-2);
+  const sec = ('00' + now.getSeconds()).slice(-2);
+  const dt = year + '-' + mon + '-' + date + ' ' + hour + ':' + min + ':' + sec;
 
   $.ajax({
     url: 'https://ipinfo.io',
     dataType: 'jsonp',
-  }).done(function (res) {
+  }).done((res) => {
     $.ajax({
       url: serverRoot + 'api/threads/' + threadID + '/comments/preview',
       data: {
@@ -140,22 +140,22 @@ $('#preview').on('click', function () {
       type: 'POST',
       cache: false,
       dataType: 'json',
-    }).done(function (res) {
+    }).done((res) => {
       redrawCommentsWithPreview(res);
-    }).fail(function (res) {
+    }).fail((res) => {
       // alert(JSON.stringify(res));
       alert('プレビューに失敗');
-    }).always(function () {
+    }).always(() => {
     });
-  }).fail(function () {
-  }).always(function () {
+  }).fail(() => {
+  }).always(() => {
   });
 });
 
 $('#send').on('click', function () {
-  var name = $('#comment-form #name').val();
-  var desc = $('#comment-form #desc').val();
-  var answer = $('#comment-form #quiz').val();
+  let name = $('#comment-form #name').val();
+  const desc = $('#comment-form #desc').val();
+  const answer = $('#comment-form #quiz').val();
 
   if (name.length > 42) {
     alert('名前は42文字まで');
@@ -181,19 +181,19 @@ $('#send').on('click', function () {
     name = '無色透明さん';
   }
 
-  var now = new Date();
-  var year = now.getFullYear();
-  var mon = ('00' + (now.getMonth() + 1)).slice(-2);
-  var date = ('00' + now.getDate()).slice(-2);
-  var hour = ('00' + now.getHours()).slice(-2);
-  var min = ('00' + now.getMinutes()).slice(-2);
-  var sec = ('00' + now.getSeconds()).slice(-2);
-  var dt = year + '-' + mon + '-' + date + ' ' + hour + ':' + min + ':' + sec;
+  const now = new Date();
+  const year = now.getFullYear();
+  const mon = ('00' + (now.getMonth() + 1)).slice(-2);
+  const date = ('00' + now.getDate()).slice(-2);
+  const hour = ('00' + now.getHours()).slice(-2);
+  const min = ('00' + now.getMinutes()).slice(-2);
+  const sec = ('00' + now.getSeconds()).slice(-2);
+  const dt = year + '-' + mon + '-' + date + ' ' + hour + ':' + min + ':' + sec;
 
   $.ajax({
     url: 'https://ipinfo.io',
     dataType: 'jsonp',
-  }).done(function (res) {
+  }).done((res) => {
     $.ajax({
       url: serverRoot + 'api/threads/' + threadID + '/comments',
       data: {
@@ -205,19 +205,19 @@ $('#send').on('click', function () {
       type: 'POST',
       cache: false,
       dataType: 'json',
-    }).done(function (res) {
+    }).done((res) => {
       // alert(JSON.stringify(res));
-      redrawThreads().always(function () {
+      redrawThreads().always(() => {
         redrawComments(threadID);
 
         alert('投稿しました！\nコメントありがとうー。\n承認されるまで、のんびりお待ちください。');
       });
-    }).fail(function (res) {
+    }).fail((res) => {
       // alert(JSON.stringify(res));
       alert('投稿に失敗');
-    }).always(function () {
+    }).always(() => {
     });
-  }).fail(function () {
-  }).always(function () {
+  }).fail(() => {
+  }).always(() => {
   });
 });
