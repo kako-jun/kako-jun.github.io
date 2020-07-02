@@ -48,6 +48,7 @@ input[type='button'] {
   margin: 4px;
   padding: 0 30px 0 25px;
   border-radius: 100px;
+  text-transform: none;
 }
 
 .button.button-primary,
@@ -57,7 +58,7 @@ input[type='reset'].button-primary,
 input[type='button'].button-primary {
   color: dimgray;
   background-color: #FFD900;
-  border-color: #FFD900;
+  border-color: #FFFF00;
 }
 
 .button.button-primary:hover,
@@ -369,7 +370,7 @@ td.strong {
 #top-image {
   max-width: 100%;
   height: auto;
-  border-radius: 21px;
+  border-radius: 14px;
 }
 
 #counter {
@@ -476,6 +477,11 @@ td.strong {
 
 #back-to-top a:hover,
 #back-to-top a:focus {}
+
+
+#back-to-top p {
+  font-size: 2rem;
+}
 
 .pc-table {
   display: none;
@@ -601,8 +607,8 @@ td.strong {
 .a-app {
   text-align: left;
   padding: 10px;
-  border: 4px double white;
-  background: lightgreen;
+  border: 4px double black;
+  background: rgb(204, 255, 204);;
   color: black;
 }
 
@@ -610,5 +616,16 @@ td.strong {
   padding: 10px;
   background: green;
   color: white;
+}
 
+.a-app .app-screenshot {
+  width: 320px;
+  height: 320px;
+  float: left;
+  margin-right: 42px;
+  border-radius: 14px;
+}
+
+.float_none {
+	clear: both;
 }
