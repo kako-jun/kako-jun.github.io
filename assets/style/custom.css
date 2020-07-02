@@ -369,6 +369,7 @@ td.strong {
 #top-image {
   max-width: 100%;
   height: auto;
+  border-radius: 21px;
 }
 
 #counter {
@@ -595,4 +596,19 @@ td.strong {
     top: -20rem;
     max-height: 615px;
   }
+}
+
+.a-app {
+  text-align: left;
+  padding: 10px;
+  border: 4px double white;
+  background: lightgreen;
+  color: black;
+}
+
+.a-app h5 {
+  padding: 10px;
+  background: green;
+  color: white;
+
 }
