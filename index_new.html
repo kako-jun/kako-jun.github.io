@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="vendor/assets/style/normalize.css">
   <link rel="stylesheet" href="vendor/assets/style/skeleton.css">
   <link rel="stylesheet" href="assets/style/custom.css">
+  <link rel="stylesheet" href="assets/style/margin_padding_helper.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
 
   <link rel="icon" type="image/png" href="assets/image/favicon_tin-tilo-rings.ico">
 
@@ -36,7 +38,7 @@
       <p class="section-description">42 things what kako-jun shows.</p>
       <p class="section-description">kako-junが作ったものを公開するサイト。</p>
       <img id="top-image" src="assets/image/top-image.png">
-      <p id="counter" class="dot-b"></p>
+      <p>viewed more than <span id="counter" class="dot-b"></span> times.</p>
     </div>
   </div>
 
@@ -45,21 +47,21 @@
       <h2 class="section-heading dot-b">Menu</h2>
       <p class="section-description">Please be sure to read below.</p>
       <p class="section-description">「Quick Start Guide」 を最初に読むんよ。</p>
-      <a class="button button-primary" href="https://gender.llll-ll.com">Quick Start Guide</a>
+      <a class="button button-primary" href="https://github.com/kako-jun/portfolio">Quick Start Guide <i class="fas fa-external-link-alt"></i></a>
 
       <br/>&nbsp;<br/>
 
       <p>
-        Web Services: <a href="#">Gender nouns</a> / <a href="#">Nyaagle</a>
+        Web Services: <a href="#gender">Gender nouns</a> / <a href="#nyaagle">Nyaagle</a>
       </p>
       <p>
-        Tools: <a href="#">Nostalgic Counter</a> / <a href="#">Nostalgic BBS</a> / <a href="#">Benford's Law Checker</a> / <a href="#">cdand</a> / <a href="#">gohat</a> / <a href="#">gitp</a>
+        Tools: <a href="#nostalgic-counter">Nostalgic Counter</a> / <a href="#nostalgic-bbs">Nostalgic BBS</a> / <a href="#benford-checker">Benford's Law Checker</a> / <a href="#cdand">cdand</a> / <a href="#gohat">gohat</a> / <a href="#gitp">gitp</a>
       </p>
       <p>
-        Games: <img src='assets/image/new024_23.gif'><a href="#">Tin! Tilo! Rings!</a> / <a href="#">¨H‡colour</a>
+        Games: <img src='assets/image/new024_23.gif'><a href="#tin-tilo-rings">Tin! Tilo! Rings!</a> / <a href="#h-colour">¨H‡colour</a>
       </p>
       <p>
-        Fansites: <img src='assets/image/new024_23.gif'><a href="#">Quintessential Quintuplets</a>
+        Fansites: <img src='assets/image/new024_23.gif'><a href="#THe-QUiNTeSSeNTiaL-QUiNTuPLeTS">Quintessential Quintuplets</a>
       </p>
 
       <hr/>
@@ -69,15 +71,16 @@
       <p class="section-description">この世のかゆいところに手が届くんよ。</p>
 
       <div class="a-app">
-        <h5>Gender nouns</h5>
+        <h5 id="gender" class="pb-0 mb-0">Gender nouns</h5>
+        <h6 class="pt-0 mt-0">名詞の性別検索</h6>
         <img class="app-screenshot" src="assets/image/top-image.png">
         <p>The search engine for gender nouns (over 4,500 nouns).</p>
         <p>Translation results are listed in Arabic, French, German, Hindi, Italian, Portuguese, Russian, and Spanish.</p>
         <p>This is an open source project. You can use it for free.</p>
         <p>男性名詞、女性名詞などを検索できるサービス。</p>
         <p>名詞に性別のある言語を、横断して検索できるのが便利やよ。</p>
-        <a class="button button-primary" href="https://gender.llll-ll.com">Go !</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/gender">GitHub</a>
+        <a class="button button-primary" href="https://gender.llll-ll.com">Go ! <i class="fas fa-external-link-alt"></i></a>
+        <a class="button button-primary" href="https://github.com/kako-jun/gender"><i class="fab fa-github"></i> GitHub</a>
         <a class="button button-primary" href="en/bbs.html">Support BBS</a>
         <p class="float_none"></p>
       </div>
@@ -85,13 +88,14 @@
       <br/>
 
       <div class="a-app">
-        <h5>Nyaagle</h5>
+        <h5 id="nyaagle" class="pb-0 mb-0">Nyaagle</h5>
+        <h6 class="pt-0 mt-0">ニャーグル</h6>
         <img class="app-screenshot" src="assets/image/top-image.png">
         <p>hoge</p>
         <p>捨て猫、迷い猫（ついでに捨て犬、迷い犬）を検索できるサービス。</p>
         <p>日本のすべての公的機関を、横断して検索できるのが便利やよ。</p>
-        <a class="button button-primary" href="https://nyaagle.llll-ll.com">Go !</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/nyaagle">GitHub</a>
+        <a class="button button-primary" href="https://nyaagle.llll-ll.com">Go ! <i class="fas fa-external-link-alt"></i></a>
+        <a class="button button-primary" href="https://github.com/kako-jun/nyaagle"><i class="fab fa-github"></i> GitHub</a>
         <a class="button button-primary" href="en/bbs.html">Support BBS</a>
         <p class="float_none"></p>
       </div>
@@ -103,72 +107,75 @@
       <p class="section-description">ほとんどのOSで動くんよ。</p>
 
       <div class="a-app">
-        <h5>Nostalgic Counter</h5>
+        <h5 id="nostalgic-counter" class="pb-0 mb-0">Nostalgic Counter</h5>
+        <h6 class="pt-0 mt-0">ノスタルジックカウンター</h6>
         <img class="app-screenshot" src="assets/image/top-image.png">
         <p>hoge</p>
         <p>。</p>
-        <a class="button button-primary" href="https://github.com/kako-jun/gitp">GitHub (English)</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/gitp/blob/master/README_ja.md">GitHub (日本語)</a>
+        <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-counter">GitHub (English) <i class="fas fa-external-link-alt"></i></a>
+        <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-counter/blob/master/README_ja.md">GitHub (日本語) <i class="fas fa-external-link-alt"></i></a>
         <p class="float_none"></p>
       </div>
 
       <br/>
 
       <div class="a-app">
-        <h5>Nostalgic BBS</h5>
+        <h5 id="nostalgic-bbs" class="pb-0 mb-0">Nostalgic BBS</h5>
+        <h6 class="pt-0 mt-0">ノスタルジックBBS</h6>
         <img class="app-screenshot" src="assets/image/top-image.png">
         <p>hoge</p>
         <p>。</p>
-        <a class="button button-primary" href="https://github.com/kako-jun/gitp">GitHub (English)</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/gitp/blob/master/README_ja.md">GitHub (日本語)</a>
+        <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-bbs">GitHub (English) <i class="fas fa-external-link-alt"></i></a>
+        <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-bbs/blob/master/README_ja.md">GitHub (日本語) <i class="fas fa-external-link-alt"></i></a>
         <p class="float_none"></p>
       </div>
 
       <br/>
 
       <div class="a-app">
-        <h5>Benford's Law Checker</h5>
+        <h5 id="benford-checker" class="pb-0 mb-0">Benford's Law Checker</h5>
+        <h6 class="pt-0 mt-0">ベンフォードの法則チェッカー</h6>
         <img class="app-screenshot" src="assets/image/top-image.png">
         <p>hoge</p>
         <p>。</p>
-        <a class="button button-primary" href="https://github.com/kako-jun/gitp">GitHub (English)</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/gitp/blob/master/README_ja.md">GitHub (日本語)</a>
+        <a class="button button-primary" href="https://github.com/kako-jun/benford-checker"><i class="fab fa-github"></i> GitHub (English)</a>
+        <a class="button button-primary" href="https://github.com/kako-jun/benford-checker/blob/master/README_ja.md"><i class="fab fa-github"></i> GitHub (日本語)</a>
         <p class="float_none"></p>
       </div>
 
       <br/>
 
       <div class="a-app">
-        <h5>cdand</h5>
+        <h5 id="cdand">cdand</h5>
         <img class="app-screenshot" src="assets/image/top-image.png">
         <p>hoge</p>
         <p>。</p>
-        <a class="button button-primary" href="https://github.com/kako-jun/cdand">GitHub (English)</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/cdand/blob/master/README_ja.md">GitHub (日本語)</a>
+        <a class="button button-primary" href="https://github.com/kako-jun/cdand"><i class="fab fa-github"></i> GitHub (English)</a>
+        <a class="button button-primary" href="https://github.com/kako-jun/cdand/blob/master/README_ja.md"><i class="fab fa-github"></i> GitHub (日本語)</a>
         <p class="float_none"></p>
       </div>
 
       <br/>
 
       <div class="a-app">
-        <h5>gohat</h5>
+        <h5 id="gohat">gohat</h5>
         <img class="app-screenshot" src="assets/image/top-image.png">
         <p>hoge</p>
         <p>。</p>
-        <a class="button button-primary" href="https://github.com/kako-jun/gohat">GitHub (English)</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/gohat/blob/master/README_ja.md">GitHub (日本語)</a>
+        <a class="button button-primary" href="https://github.com/kako-jun/gohat"><i class="fab fa-github"></i> GitHub (English)</a>
+        <a class="button button-primary" href="https://github.com/kako-jun/gohat/blob/master/README_ja.md"><i class="fab fa-github"></i> GitHub (日本語)</a>
         <p class="float_none"></p>
       </div>
 
       <br/>
 
       <div class="a-app">
-        <h5>gitp</h5>
+        <h5 id="gitp">gitp</h5>
         <img class="app-screenshot" src="assets/image/top-image.png">
         <p>hoge</p>
         <p>。</p>
-        <a class="button button-primary" href="https://github.com/kako-jun/gitp">GitHub (English)</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/gitp/blob/master/README_ja.md">GitHub (日本語)</a>
+        <a class="button button-primary" href="https://github.com/kako-jun/gitp"><i class="fab fa-github"></i> GitHub (English)</a>
+        <a class="button button-primary" href="https://github.com/kako-jun/gitp/blob/master/README_ja.md"><i class="fab fa-github"></i> GitHub (日本語)</a>
         <p class="float_none"></p>
       </div>
 
@@ -179,13 +186,14 @@
       <p class="section-description">このままブラウザで遊べるんよ。</p>
 
       <div class="a-app">
-        <h5>Tin! Tilo! Rings!</h5>
+        <h5 id="tin-tilo-rings" class="pb-0 mb-0">Tin! Tilo! Rings!</h5>
+        <h6 class="pt-0 mt-0">チンチロリングス</h6>
         <img class="app-screenshot" src="assets/image/top-image.png">
         <p>hoge</p>
         <p>チンチロリンを独自にアレンジした、スロットマシンっぽいゲーム。</p>
         <p>最短で1分。ドツボにハマって42分くらいでクリアできるんよ。</p>
-        <a class="button button-primary" href="share/games/tin-tilo-rings/phinajs">Go !</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/tin-tilo-rings">GitHub</a>
+        <a class="button button-primary" href="share/games/tin-tilo-rings/phinajs">Go ! <i class="fas fa-external-link-alt"></i></a>
+        <a class="button button-primary" href="https://github.com/kako-jun/tin-tilo-rings"><i class="fab fa-github"></i> GitHub</a>
         <a class="button button-primary" href="en/bbs.html">Support BBS</a>
         <a class="button button-primary" href="ja/tin-tilo-rings_ranking.html">Top Players</a>
         <p class="float_none"></p>
@@ -194,12 +202,13 @@
       <br/>
 
       <div class="a-app">
-        <h5>¨H‡colour</h5>
+        <h5 id="h-colour" class="pb-0 mb-0">¨H‡colour</h5>
+        <h6 class="pt-0 mt-0">宇宙の果てわ なに色か？</h6>
         <img class="app-screenshot" src="assets/image/top-image.png">
         <p>hoge</p>
         <p>。</p>
-        <a class="button button-primary" href="share/games/tin-tilo-rings/phinajs">Go !</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/tin-tilo-rings">GitHub</a>
+        <a class="button button-primary" href="share/games/tin-tilo-rings/phinajs">Go ! <i class="fas fa-external-link-alt"></i></a>
+        <a class="button button-primary" href="https://github.com/kako-jun/tin-tilo-rings"><i class="fab fa-github"></i> GitHub</a>
         <a class="button button-primary" href="en/bbs.html">Support BBS</a>
         <p class="float_none"></p>
       </div>
@@ -211,13 +220,13 @@
       <p class="section-description">日本の文化が好きなんよ。</p>
 
       <div class="a-app">
-        <h5>Quintessential Quintuplets</h5>
+        <h5 id="THe-QUiNTeSSeNTiaL-QUiNTuPLeTS" class="pb-0 mb-0">Quintessential Quintuplets</h5>
+        <h6 class="pt-0 mt-0">最終回から振り返る『五等分の花嫁』</h6>
         <img class="app-screenshot" src="assets/image/top-image.png">
         <p>hoge</p>
         <p>『五等分の花嫁』が好きすぎて作った、ディープな考察サイト。</p>
         <p>最終回から振り返って、推理可能なトリックだったかを検証したいんよ。</p>
-        <a class="button button-primary" href="https://nyaagle.llll-ll.com">Go !</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/nyaagle">GitHub</a>
+        <a class="button button-primary" href="https://github.com/kako-jun/THe-QUiNTeSSeNTiaL-QUiNTuPLeTS"><i class="fab fa-github"></i> GitHub</a>
         <p class="float_none"></p>
       </div>
     </div>
@@ -249,6 +258,12 @@
     <a href="#top">
       <span class="dot">↑</span>
       <p>Back to top</p>
+    </a>
+  </div>
+
+  <div id="side-back-to-top">
+    <a href="#top">
+      <span class="dot">↑</span>
     </a>
   </div>
 
