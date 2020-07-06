@@ -128,12 +128,12 @@ window.onload = () => {
     easing: "easeOutQuad"
   });
 
-  window.NostalgicCounter.beNostalgic(
+  window.NostalgicCounter.showCounter(
     "nostalgic-counter",
     "https://nostalgic-counter.llll-ll.com/api/counter",
-    {
-      image_dir_path: "./assets/image/counter/pdy",
-      image_ext: ".gif"
-    }
+    // {
+    //   image_dir_path: "./assets/image/counter/pdy",
+    //   image_ext: ".gif"
+    // }
   );
 };
