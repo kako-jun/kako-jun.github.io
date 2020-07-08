@@ -1,276 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>llll-ll</title>
+    <meta
+      name="description"
+      content="Website of an indie game developer in Japan. We distribute characteristic Kawaii games, useful web services, tools, and more."
+    />
+    <meta name="author" content="kako-jun" />
 
-<head>
-  <meta charset="utf-8">
-  <title>llll-ll</title>
-  <meta name="description" content="Website of an indie game developer in Japan. We distribute characteristic Kawaii games, useful web services, tools, and more.">
-  <meta name="author" content="kako-jun">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
 
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+    <link rel="stylesheet" href="vendor/assets/style/normalize.css" />
+    <link rel="stylesheet" href="vendor/assets/style/skeleton.css" />
+    <link rel="stylesheet" href="assets/style/margin_padding_helper.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" />
+    <link rel="stylesheet" href="assets/style/my.css" />
 
-  <link rel="stylesheet" href="vendor/assets/style/normalize.css">
-  <link rel="stylesheet" href="vendor/assets/style/skeleton.css">
-  <link rel="stylesheet" href="assets/style/margin_padding_helper.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
-  <link rel="stylesheet" href="assets/style/my.css">
+    <link rel="icon" type="image/png" href="assets/image/favicon_tin-tilo-rings.ico" />
 
-  <link rel="icon" type="image/png" href="assets/image/favicon_tin-tilo-rings.ico">
+    <meta property="og:url" content="https://llll-ll.com" />
+    <meta property="og:title" content="llll-ll" />
+    <meta
+      property="og:description"
+      content="Website of an indie game developer in Japan. We distribute characteristic Kawaii games, useful web services, tools, and more."
+    />
+    <meta property="og:image" content="image/logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="llll-ll" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kako_jun_42" />
+  </head>
 
-  <meta property="og:url" content="https://llll-ll.com">
-  <meta property="og:title" content="llll-ll">
-  <meta property="og:description" content="Website of an indie game developer in Japan. We distribute characteristic Kawaii games, useful web services, tools, and more.">
-  <meta property="og:image" content="image/logo.png">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="llll-ll">
-  <meta property="og:locale" content="en_US">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@kako_jun_42">
-</head>
-
-<body>
-  <div class="section top_fore">
-    <div class="container">
-      <h1 class="section-heading dot-b">llll-ll</h1>
-      <p class="section-description">42 things what kako-jun shows.</p>
-      <p class="section-description">kako-junが作ったものを公開するサイト。</p>
-      <img id="top-image" src="assets/image/top-image.png">
-      <p>viewed more than <span id="nostalgic-counter" class="dot-b"></span> times.</p>
-    </div>
-  </div>
-
-  <div class="section top_back">
-    <div class="container">
-      <h2 class="section-heading dot-b">Menu</h2>
-      <p class="section-description">Please be sure to read below.</p>
-      <p class="section-description">「Quick Start Guide」 を最初に読むんよ。</p>
-      <a class="button button-primary" href="https://github.com/kako-jun/portfolio">Quick Start Guide <i class="fas fa-external-link-alt"></i></a>
-
-      <br/>&nbsp;<br/>
-
-      <p>
-        Web Services: <a href="#gender">Gender nouns</a> / <a href="#nyaagle">Nyaagle</a>
-      </p>
-      <p>
-        Tools: <a href="#nostalgic-counter">Nostalgic Counter</a> / <a href="#nostalgic-bbs">Nostalgic BBS</a> / <a href="#benford-checker">Benford's Law Checker</a> / <a href="#cdand">cdand</a> / <a href="#gohat">gohat</a> / <a href="#gitp">gitp</a>
-      </p>
-      <p>
-        Games: <img src='assets/image/new024_23.gif'><a href="#tin-tilo-rings">Tin! Tilo! Rings!</a> / <a href="#h-colour">¨H‡colour</a>
-      </p>
-      <p>
-        Fansites: <img src='assets/image/new024_23.gif'><a href="#THe-QUiNTeSSeNTiaL-QUiNTuPLeTS">Quintessential Quintuplets</a>
-      </p>
-
-      <hr/>
-
-      <h4 class="section-heading dot-b">Web Services</h4>
-      <p class="section-description">kako-junの作ったWebサービスやよ。</p>
-      <p class="section-description">この世のかゆいところに手が届くんよ。</p>
-
-      <div class="a-app">
-        <h5 id="gender" class="pb-0 mb-0">Gender nouns</h5>
-        <h6 class="pt-0 mt-0">名詞の性別検索</h6>
-        <img class="app-screenshot" src="assets/image/top-image.png">
-        <p>The search engine for gender nouns (over 4,500 nouns).</p>
-        <p>Translation results are listed in Arabic, French, German, Hindi, Italian, Portuguese, Russian, and Spanish.</p>
-        <p>This is an open source project. You can use it for free.</p>
-        <p>男性名詞、女性名詞などを検索できるサービス。</p>
-        <p>名詞に性別のある言語を、横断して検索できるのが便利やよ。</p>
-        <a class="button button-primary" href="https://gender.llll-ll.com">Go ! <i class="fas fa-external-link-alt"></i></a>
-        <a class="button button-primary" href="https://github.com/kako-jun/gender"><i class="fab fa-github"></i> GitHub</a>
-        <a class="button button-primary" href="en/bbs.html">Support BBS</a>
-        <p class="float_none"></p>
-      </div>
-
-      <br/>
-
-      <div class="a-app">
-        <h5 id="nyaagle" class="pb-0 mb-0">Nyaagle</h5>
-        <h6 class="pt-0 mt-0">ニャーグル</h6>
-        <img class="app-screenshot" src="assets/image/top-image.png">
-        <p>hoge</p>
-        <p>捨て猫、迷い猫（ついでに捨て犬、迷い犬）を検索できるサービス。</p>
-        <p>日本のすべての公的機関を、横断して検索できるのが便利やよ。</p>
-        <a class="button button-primary" href="https://nyaagle.llll-ll.com">Go ! <i class="fas fa-external-link-alt"></i></a>
-        <a class="button button-primary" href="https://github.com/kako-jun/nyaagle"><i class="fab fa-github"></i> GitHub</a>
-        <a class="button button-primary" href="en/bbs.html">Support BBS</a>
-        <p class="float_none"></p>
-      </div>
-
-      <hr/>
-
-      <h4 class="section-heading dot-b">Tools</h4>
-      <p class="section-description">kako-junの作ったツールやよ。</p>
-      <p class="section-description">ほとんどのOSで動くんよ。</p>
-
-      <div class="a-app">
-        <h5 id="nostalgic-counter" class="pb-0 mb-0">Nostalgic Counter</h5>
-        <h6 class="pt-0 mt-0">ノスタルジックカウンター</h6>
-        <img class="app-screenshot" src="assets/image/top-image.png">
-        <p>hoge</p>
-        <p>。</p>
-        <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-counter"><i class="fab fa-github"></i> GitHub (English)</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-counter/blob/master/README_ja.md"><i class="fab fa-github"></i> GitHub (日本語)</a>
-        <p class="float_none"></p>
-      </div>
-
-      <br/>
-
-      <div class="a-app">
-        <h5 id="nostalgic-bbs" class="pb-0 mb-0">Nostalgic BBS</h5>
-        <h6 class="pt-0 mt-0">ノスタルジックBBS</h6>
-        <img class="app-screenshot" src="assets/image/top-image.png">
-        <p>hoge</p>
-        <p>。</p>
-        <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-bbs"><i class="fab fa-github"></i> GitHub (English)</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-bbs/blob/master/README_ja.md"><i class="fab fa-github"></i> GitHub (日本語)</a>
-        <p class="float_none"></p>
-      </div>
-
-      <br/>
-
-      <div class="a-app">
-        <h5 id="benford-checker" class="pb-0 mb-0">Benford's Law Checker</h5>
-        <h6 class="pt-0 mt-0">ベンフォードの法則チェッカー</h6>
-        <img class="app-screenshot" src="assets/image/top-image.png">
-        <p>hoge</p>
-        <p>。</p>
-        <a class="button button-primary" href="https://github.com/kako-jun/benford-checker"><i class="fab fa-github"></i> GitHub (English)</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/benford-checker/blob/master/README_ja.md"><i class="fab fa-github"></i> GitHub (日本語)</a>
-        <p class="float_none"></p>
-      </div>
-
-      <br/>
-
-      <div class="a-app">
-        <h5 id="cdand">cdand</h5>
-        <img class="app-screenshot" src="assets/image/top-image.png">
-        <p>hoge</p>
-        <p>。</p>
-        <a class="button button-primary" href="https://github.com/kako-jun/cdand"><i class="fab fa-github"></i> GitHub (English)</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/cdand/blob/master/README_ja.md"><i class="fab fa-github"></i> GitHub (日本語)</a>
-        <p class="float_none"></p>
-      </div>
-
-      <br/>
-
-      <div class="a-app">
-        <h5 id="gohat">gohat</h5>
-        <img class="app-screenshot" src="assets/image/top-image.png">
-        <p>hoge</p>
-        <p>。</p>
-        <a class="button button-primary" href="https://github.com/kako-jun/gohat"><i class="fab fa-github"></i> GitHub (English)</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/gohat/blob/master/README_ja.md"><i class="fab fa-github"></i> GitHub (日本語)</a>
-        <p class="float_none"></p>
-      </div>
-
-      <br/>
-
-      <div class="a-app">
-        <h5 id="gitp">gitp</h5>
-        <img class="app-screenshot" src="assets/image/top-image.png">
-        <p>hoge</p>
-        <p>。</p>
-        <a class="button button-primary" href="https://github.com/kako-jun/gitp"><i class="fab fa-github"></i> GitHub (English)</a>
-        <a class="button button-primary" href="https://github.com/kako-jun/gitp/blob/master/README_ja.md"><i class="fab fa-github"></i> GitHub (日本語)</a>
-        <p class="float_none"></p>
-      </div>
-
-      <hr/>
-
-      <h4 class="section-heading dot-b">Games</h4>
-      <p class="section-description">kako-junの作ったゲームやよ。</p>
-      <p class="section-description">このままブラウザで遊べるんよ。</p>
-
-      <div class="a-app">
-        <h5 id="tin-tilo-rings" class="pb-0 mb-0">Tin! Tilo! Rings!</h5>
-        <h6 class="pt-0 mt-0">チンチロリングス</h6>
-        <img class="app-screenshot" src="assets/image/top-image.png">
-        <p>hoge</p>
-        <p>チンチロリンを独自にアレンジした、スロットマシンっぽいゲーム。</p>
-        <p>最短で1分。ドツボにハマって42分くらいでクリアできるんよ。</p>
-        <a class="button button-primary" href="share/games/tin-tilo-rings/phinajs">Go ! <i class="fas fa-external-link-alt"></i></a>
-        <a class="button button-primary" href="https://github.com/kako-jun/tin-tilo-rings"><i class="fab fa-github"></i> GitHub</a>
-        <a class="button button-primary" href="en/bbs.html">Support BBS</a>
-        <a class="button button-primary" href="ja/tin-tilo-rings_ranking.html">Top Players</a>
-        <p class="float_none"></p>
-      </div>
-
-      <br/>
-
-      <div class="a-app">
-        <h5 id="h-colour" class="pb-0 mb-0">¨H‡colour</h5>
-        <h6 class="pt-0 mt-0">宇宙の果てわ なに色か？</h6>
-        <img class="app-screenshot" src="assets/image/top-image.png">
-        <p>hoge</p>
-        <p>。</p>
-        <a class="button button-primary" href="share/games/tin-tilo-rings/phinajs">Go ! <i class="fas fa-external-link-alt"></i></a>
-        <a class="button button-primary" href="https://github.com/kako-jun/tin-tilo-rings"><i class="fab fa-github"></i> GitHub</a>
-        <a class="button button-primary" href="en/bbs.html">Support BBS</a>
-        <p class="float_none"></p>
-      </div>
-
-      <hr/>
-
-      <h4 class="section-heading dot-b">Fansites</h4>
-      <p class="section-description">kako-junの作ったファンサイトやよ。</p>
-      <p class="section-description">日本の文化が好きなんよ。</p>
-
-      <div class="a-app">
-        <h5 id="THe-QUiNTeSSeNTiaL-QUiNTuPLeTS" class="pb-0 mb-0">Quintessential Quintuplets</h5>
-        <h6 class="pt-0 mt-0">最終回から振り返る『五等分の花嫁』</h6>
-        <img class="app-screenshot" src="assets/image/top-image.png">
-        <p>hoge</p>
-        <p>『五等分の花嫁』が好きすぎて作った、ディープな考察サイト。</p>
-        <p>最終回から振り返って、推理可能なトリックだったかを検証したいんよ。</p>
-        <a class="button button-primary" href="https://github.com/kako-jun/THe-QUiNTeSSeNTiaL-QUiNTuPLeTS"><i class="fab fa-github"></i> GitHub</a>
-        <p class="float_none"></p>
+  <body>
+    <div class="section top_fore">
+      <div class="container">
+        <h1 class="section-heading dot-b">llll-ll</h1>
+        <p class="section-description">42 things what kako-jun shows.</p>
+        <p class="section-description">kako-junが作ったものを公開するサイト。</p>
+        <img id="top-image" src="assets/image/top-image.png" />
+        <p>viewed more than <span id="nostalgic-counter" class="dot-b"></span> times.</p>
+        <p><span id="nostalgic-counter-kiriban" class="dot-b"></span></p>
+        <p><span id="nostalgic-counter-past" class="dot-b"></span></p>
       </div>
     </div>
-  </div>
 
-  <div class="section top_fore">
-    <div class='container'>
-      <h2 class="section-heading dot-b">Contact</h2>
-      <p class='section-description'>せっかくだから赤い連絡先を選ぶぜ。</p>
-      <p class='section-description'>治せるバグなら治すよー。</p>
-      <div class='row'>
-        <div class='one-half column contact'>
-          <img class='u-max-full-width' src='assets/image/twitter.png'>
-          <h5 class='contact-heading'>
-            <a href='https://twitter.com/kako_jun_42'>@kako_jun_42</a>
-          </h5>
+    <div class="section top_back">
+      <div class="container">
+        <h2 class="section-heading dot-b">Menu</h2>
+        <p class="section-description">Please be sure to read below.</p>
+        <p class="section-description">「Quick Start Guide」 を最初に読むんよ。</p>
+        <a class="button button-primary" href="https://github.com/kako-jun/portfolio"
+          >Quick Start Guide <i class="fas fa-external-link-alt"></i
+        ></a>
+
+        <br />&nbsp;<br />
+
+        <p>Web Services: <a href="#gender">Gender nouns</a> / <a href="#nyaagle">Nyaagle</a></p>
+        <p>
+          Tools: <a href="#nostalgic-counter">Nostalgic Counter</a> / <a href="#nostalgic-bbs">Nostalgic BBS</a> /
+          <a href="#benford-checker">Benford's Law Checker</a> / <a href="#cdand">cdand</a> /
+          <a href="#gohat">gohat</a> / <a href="#gitp">gitp</a>
+        </p>
+        <p>
+          Games: <img src="assets/image/new024_23.gif" /><a href="#tin-tilo-rings">Tin! Tilo! Rings!</a> /
+          <a href="#h-colour">¨H‡colour</a>
+        </p>
+        <p>
+          Fansites: <img src="assets/image/new024_23.gif" /><a href="#THe-QUiNTeSSeNTiaL-QUiNTuPLeTS"
+            >Quintessential Quintuplets</a
+          >
+        </p>
+
+        <hr />
+
+        <h4 class="section-heading dot-b">Web Services</h4>
+        <p class="section-description">kako-junの作ったWebサービスやよ。</p>
+        <p class="section-description">この世のかゆいところに手が届くんよ。</p>
+
+        <div class="a-app">
+          <h5 id="gender" class="pb-0 mb-0">Gender nouns</h5>
+          <h6 class="pt-0 mt-0">名詞の性別検索</h6>
+          <img class="app-screenshot" src="assets/image/top-image.png" />
+          <p>The search engine for gender nouns (over 4,500 nouns).</p>
+          <p>
+            Translation results are listed in Arabic, French, German, Hindi, Italian, Portuguese, Russian, and Spanish.
+          </p>
+          <p>This is an open source project. You can use it for free.</p>
+          <p>男性名詞、女性名詞などを検索できるサービス。</p>
+          <p>名詞に性別のある言語を、横断して検索できるのが便利やよ。</p>
+          <a class="button button-primary" href="https://gender.llll-ll.com"
+            >Go ! <i class="fas fa-external-link-alt"></i
+          ></a>
+          <a class="button button-primary" href="https://github.com/kako-jun/gender"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <a class="button button-primary" href="en/bbs.html">Support BBS</a>
+          <p class="float_none"></p>
         </div>
-        <div class='one-half column contact'>
-          <img class='u-max-full-width' src='assets/image/github.png'>
-          <h5 class='contact-heading'>
-            <a href='http://github.com/kako-jun'>kako-jun</a>
-          </h5>
+
+        <br />
+
+        <div class="a-app">
+          <h5 id="nyaagle" class="pb-0 mb-0">Nyaagle</h5>
+          <h6 class="pt-0 mt-0">ニャーグル</h6>
+          <img class="app-screenshot" src="assets/image/top-image.png" />
+          <p>hoge</p>
+          <p>捨て猫、迷い猫（ついでに捨て犬、迷い犬）を検索できるサービス。</p>
+          <p>日本のすべての公的機関を、横断して検索できるのが便利やよ。</p>
+          <a class="button button-primary" href="https://nyaagle.llll-ll.com"
+            >Go ! <i class="fas fa-external-link-alt"></i
+          ></a>
+          <a class="button button-primary" href="https://github.com/kako-jun/nyaagle"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <a class="button button-primary" href="en/bbs.html">Support BBS</a>
+          <p class="float_none"></p>
+        </div>
+
+        <hr />
+
+        <h4 class="section-heading dot-b">Tools</h4>
+        <p class="section-description">kako-junの作ったツールやよ。</p>
+        <p class="section-description">ほとんどのOSで動くんよ。</p>
+
+        <div class="a-app">
+          <h5 id="nostalgic-counter" class="pb-0 mb-0">Nostalgic Counter</h5>
+          <h6 class="pt-0 mt-0">ノスタルジックカウンター</h6>
+          <img class="app-screenshot" src="assets/image/top-image.png" />
+          <p>hoge</p>
+          <p>。</p>
+          <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-counter"
+            ><i class="fab fa-github"></i> GitHub (English)</a
+          >
+          <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-counter/blob/master/README_ja.md"
+            ><i class="fab fa-github"></i> GitHub (日本語)</a
+          >
+          <p class="float_none"></p>
+        </div>
+
+        <br />
+
+        <div class="a-app">
+          <h5 id="nostalgic-bbs" class="pb-0 mb-0">Nostalgic BBS</h5>
+          <h6 class="pt-0 mt-0">ノスタルジックBBS</h6>
+          <img class="app-screenshot" src="assets/image/top-image.png" />
+          <p>hoge</p>
+          <p>。</p>
+          <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-bbs"
+            ><i class="fab fa-github"></i> GitHub (English)</a
+          >
+          <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-bbs/blob/master/README_ja.md"
+            ><i class="fab fa-github"></i> GitHub (日本語)</a
+          >
+          <p class="float_none"></p>
+        </div>
+
+        <br />
+
+        <div class="a-app">
+          <h5 id="benford-checker" class="pb-0 mb-0">Benford's Law Checker</h5>
+          <h6 class="pt-0 mt-0">ベンフォードの法則チェッカー</h6>
+          <img class="app-screenshot" src="assets/image/top-image.png" />
+          <p>hoge</p>
+          <p>。</p>
+          <a class="button button-primary" href="https://github.com/kako-jun/benford-checker"
+            ><i class="fab fa-github"></i> GitHub (English)</a
+          >
+          <a class="button button-primary" href="https://github.com/kako-jun/benford-checker/blob/master/README_ja.md"
+            ><i class="fab fa-github"></i> GitHub (日本語)</a
+          >
+          <p class="float_none"></p>
+        </div>
+
+        <br />
+
+        <div class="a-app">
+          <h5 id="cdand">cdand</h5>
+          <img class="app-screenshot" src="assets/image/top-image.png" />
+          <p>hoge</p>
+          <p>。</p>
+          <a class="button button-primary" href="https://github.com/kako-jun/cdand"
+            ><i class="fab fa-github"></i> GitHub (English)</a
+          >
+          <a class="button button-primary" href="https://github.com/kako-jun/cdand/blob/master/README_ja.md"
+            ><i class="fab fa-github"></i> GitHub (日本語)</a
+          >
+          <p class="float_none"></p>
+        </div>
+
+        <br />
+
+        <div class="a-app">
+          <h5 id="gohat">gohat</h5>
+          <img class="app-screenshot" src="assets/image/top-image.png" />
+          <p>hoge</p>
+          <p>。</p>
+          <a class="button button-primary" href="https://github.com/kako-jun/gohat"
+            ><i class="fab fa-github"></i> GitHub (English)</a
+          >
+          <a class="button button-primary" href="https://github.com/kako-jun/gohat/blob/master/README_ja.md"
+            ><i class="fab fa-github"></i> GitHub (日本語)</a
+          >
+          <p class="float_none"></p>
+        </div>
+
+        <br />
+
+        <div class="a-app">
+          <h5 id="gitp">gitp</h5>
+          <img class="app-screenshot" src="assets/image/top-image.png" />
+          <p>hoge</p>
+          <p>。</p>
+          <a class="button button-primary" href="https://github.com/kako-jun/gitp"
+            ><i class="fab fa-github"></i> GitHub (English)</a
+          >
+          <a class="button button-primary" href="https://github.com/kako-jun/gitp/blob/master/README_ja.md"
+            ><i class="fab fa-github"></i> GitHub (日本語)</a
+          >
+          <p class="float_none"></p>
+        </div>
+
+        <hr />
+
+        <h4 class="section-heading dot-b">Games</h4>
+        <p class="section-description">kako-junの作ったゲームやよ。</p>
+        <p class="section-description">このままブラウザで遊べるんよ。</p>
+
+        <div class="a-app">
+          <h5 id="tin-tilo-rings" class="pb-0 mb-0">Tin! Tilo! Rings!</h5>
+          <h6 class="pt-0 mt-0">チンチロリングス</h6>
+          <img class="app-screenshot" src="assets/image/top-image.png" />
+          <p>hoge</p>
+          <p>チンチロリンを独自にアレンジした、スロットマシンっぽいゲーム。</p>
+          <p>最短で1分。ドツボにハマって42分くらいでクリアできるんよ。</p>
+          <a class="button button-primary" href="share/games/tin-tilo-rings/phinajs"
+            >Go ! <i class="fas fa-external-link-alt"></i
+          ></a>
+          <a class="button button-primary" href="https://github.com/kako-jun/tin-tilo-rings"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <a class="button button-primary" href="en/bbs.html">Support BBS</a>
+          <a class="button button-primary" href="ja/tin-tilo-rings_ranking.html">Top Players</a>
+          <p class="float_none"></p>
+        </div>
+
+        <br />
+
+        <div class="a-app">
+          <h5 id="h-colour" class="pb-0 mb-0">¨H‡colour</h5>
+          <h6 class="pt-0 mt-0">宇宙の果てわ なに色か？</h6>
+          <img class="app-screenshot" src="assets/image/top-image.png" />
+          <p>hoge</p>
+          <p>。</p>
+          <a class="button button-primary" href="share/games/tin-tilo-rings/phinajs"
+            >Go ! <i class="fas fa-external-link-alt"></i
+          ></a>
+          <a class="button button-primary" href="https://github.com/kako-jun/tin-tilo-rings"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <a class="button button-primary" href="en/bbs.html">Support BBS</a>
+          <p class="float_none"></p>
+        </div>
+
+        <hr />
+
+        <h4 class="section-heading dot-b">Fansites</h4>
+        <p class="section-description">kako-junの作ったファンサイトやよ。</p>
+        <p class="section-description">日本の文化が好きなんよ。</p>
+
+        <div class="a-app">
+          <h5 id="THe-QUiNTeSSeNTiaL-QUiNTuPLeTS" class="pb-0 mb-0">Quintessential Quintuplets</h5>
+          <h6 class="pt-0 mt-0">最終回から振り返る『五等分の花嫁』</h6>
+          <img class="app-screenshot" src="assets/image/top-image.png" />
+          <p>hoge</p>
+          <p>『五等分の花嫁』が好きすぎて作った、ディープな考察サイト。</p>
+          <p>最終回から振り返って、推理可能なトリックだったかを検証したいんよ。</p>
+          <a class="button button-primary" href="https://github.com/kako-jun/THe-QUiNTeSSeNTiaL-QUiNTuPLeTS"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <p class="float_none"></p>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="back-to-top" class="section">
-    <a href="#top">
-      <span class="dot">↑</span>
-      <p>Back to top</p>
-    </a>
-  </div>
+    <div class="section top_fore">
+      <div class="container">
+        <h2 class="section-heading dot-b">Contact</h2>
+        <p class="section-description">せっかくだから赤い連絡先を選ぶぜ。</p>
+        <p class="section-description">治せるバグなら治すよー。</p>
+        <div class="row">
+          <div class="one-half column contact">
+            <img class="u-max-full-width" src="assets/image/twitter.png" />
+            <h5 class="contact-heading">
+              <a href="https://twitter.com/kako_jun_42">@kako_jun_42</a>
+            </h5>
+          </div>
+          <div class="one-half column contact">
+            <img class="u-max-full-width" src="assets/image/github.png" />
+            <h5 class="contact-heading">
+              <a href="http://github.com/kako-jun">kako-jun</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div id="side-back-to-top">
-    <a href="#top">
-      <span class="dot">↑</span>
-    </a>
-  </div>
+    <div id="back-to-top" class="section">
+      <a href="#top">
+        <span class="dot">↑</span>
+        <p>Back to top</p>
+      </a>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/kako-jun/nostalgic-counter@v1.0.1/dist/nostalgic-counter.min.js"></script>
-  <script src="./assets/js/my.js"></script>
-</body>
+    <div id="side-back-to-top">
+      <a href="#top">
+        <span class="dot">↑</span>
+      </a>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kako-jun/nostalgic-counter@v1.0.2/dist/nostalgic-counter.min.js"></script>
+    <script src="./assets/js/my.js"></script>
+  </body>
 </html>
