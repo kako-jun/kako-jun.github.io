@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>llll-ll</title>
+    <meta
+      name="description"
+      content="Website of an indie game developer in Japan. We distribute characteristic Kawaii games, useful web services, tools, and more."
+    />
+    <meta name="author" content="kako-jun" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" />
+    <link rel="stylesheet" href="../vendor/assets/style/normalize.css" />
+    <link rel="stylesheet" href="../vendor/assets/style/skeleton.css" />
+    <link rel="stylesheet" href="../assets/style/margin_padding_helper.css" />
+    <link rel="stylesheet" href="../assets/style/my.css" />
+
+    <link rel="icon" type="image/png" href="../assets/image/favicon.ico" />
+
+    <meta property="og:url" content="https://llll-ll.com" />
+    <meta property="og:title" content="llll-ll" />
+    <meta
+      property="og:description"
+      content="Website of an indie game developer in Japan. We distribute characteristic Kawaii games, useful web services, tools, and more."
+    />
+    <meta property="og:image" content="image/logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="llll-ll" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kako_jun_42" />
+  </head>
+
+  <body>
+    <div class="section top_fore">
+      <div class="container">
+        <h1 class="section-heading dot-b">llll-ll</h1>
+        <p class="section-description">42 things what kako-jun shows.</p>
+        <p class="section-description">kako-junが作ったものを公開するサイト。</p>
+        <img id="top-image" src="../assets/image/top-image.png" />
+      </div>
+    </div>
+
+    <div class="section top_back">
+      <div class="container">
+        <h2 class="section-heading dot-b">Nostalgic Counter Demo</h2>
+        <p class="section-description">動作デモです。</p>
+        <p class="section-description">GitHubに戻る時は、下のボタンから。</p>
+        <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-counter"
+          ><i class="fab fa-github"></i> GitHub (English)</a
+        >
+        <a class="button button-primary" href="https://github.com/kako-jun/nostalgic-counter/blob/master/README_ja.md"
+          ><i class="fab fa-github"></i> GitHub (日本語)</a
+        >
+
+        <hr />
+
+        <h4 class="dot-b">Sample 1</h4>
+        <p>何も加工せずに、アクセス数を表示</p>
+        <div id="nostalgic-counter-sample1"></div>
+
+        <pre>
+          <code>
+          const counter = await window.NostalgicCounter.getCounter(
+            "https://nostalgic-counter.llll-ll.com/api/counter?id=sample&ex"
+          );
+          </code>
+        </pre>
+
+        <p>の後に、</p>
+
+        <pre>
+          <code>
+            window.NostalgicCounter.showCounter("nostalgic-counter-sample1", counter.total);
+          </code>
+        </pre>
+
+        <hr />
+
+        <h4 class="dot-b">Sample 2</h4>
+        <p>太字で表示</p>
+        <div id="nostalgic-counter-sample2"></div>
+
+        <pre>
+          <code>
+            window.NostalgicCounter.showCounter("nostalgic-counter-sample2", counter.total, {
+              format: "<strong>{count}</strong>",
+            });
+          </code>
+        </pre>
+
+        <hr />
+
+        <h4 class="dot-b">Sample 3</h4>
+        <p>計8桁になるまでゼロ埋め</p>
+        <div id="nostalgic-counter-sample3"></div>
+
+        <pre>
+          <code>
+          </code>
+        </pre>
+
+        <hr />
+
+        <h4 class="dot-b">Sample 4</h4>
+        <p>アニメーションGIFで表示</p>
+        <div id="nostalgic-counter-sample4"></div>
+
+        <pre>
+          <code>
+          </code>
+        </pre>
+
+        <hr />
+
+        <h4 class="dot-b">Sample 5</h4>
+        <p>アニメーションGIFで表示しつつ、計8桁になるまでゼロ埋め</p>
+        <div id="nostalgic-counter-sample5"></div>
+
+        <pre>
+          <code>
+          </code>
+        </pre>
+
+        <hr />
+
+        <h4 class="dot-b">Sample 6</h4>
+        <p>今日のアクセス数を表示</p>
+        <div id="nostalgic-counter-sample6"></div>
+
+        <pre>
+          <code>
+            window.NostalgicCounter.showCounter("nostalgic-counter-sample6", counter.today);
+          </code>
+        </pre>
+
+        <hr />
+
+        <h4 class="dot-b">Sample 7</h4>
+        <p>昨日の日付を表示し、その横に昨日のアクセス数を太字で表示</p>
+        <span id="nostalgic-counter-sample7-past"></span>
+        <span id="nostalgic-counter-sample7"></span>
+
+        <pre>
+          <code>
+            const targetElement = document.getElementById("nostalgic-counter-sample7-past");
+            if (targetElement) {
+              targetElement.innerHTML = counter.yesterday_date + ": ";
+            }
+
+            window.NostalgicCounter.showCounter("nostalgic-counter-sample7", counter.yesterday, {
+              format: "<strong>{count}</strong>",
+            });
+          </code>
+        </pre>
+
+        <hr />
+
+        <h4 class="dot-b">Sample 8</h4>
+        <p>今月のアクセス数を、計4桁になるまでゼロ埋め</p>
+        <div id="nostalgic-counter-sample8"></div>
+
+        <pre>
+          <code>
+            window.NostalgicCounter.showCounter("nostalgic-counter-sample8", counter.this_month, {
+              zero_padding_length: 4,
+            });
+          </code>
+        </pre>
+
+        <hr />
+
+        <h4 class="dot-b">Sample 9</h4>
+        <p>先月のアクセス数を、アニメーションGIFで表示</p>
+        <div id="nostalgic-counter-sample9"></div>
+
+        <pre>
+          <code>
+          </code>
+        </pre>
+
+        <hr />
+
+        <h4 class="dot-b">Sample 10</h4>
+        <p>今年のアクセス数を、</p>
+        <div id="nostalgic-counter-sample10"></div>
+
+        <pre>
+          <code>
+          </code>
+        </pre>
+
+        <hr />
+
+        <h4 class="dot-b">Sample 11</h4>
+        <p>昨年のアクセス数を、</p>
+        <div id="nostalgic-counter-sample11"></div>
+
+        <pre>
+          <code>
+          </code>
+        </pre>
+
+        <hr />
+
+        <h4 class="dot-b">Sample 12</h4>
+        <p>キリ番を表示</p>
+        <p>10番ごと、100番ごと、1000番ごと、10000番ごとをキリ番扱いに</p>
+        <p>語呂合わせのアクセス数をキリ番扱いに</p>
+        <p>キリ番でない時には、特にメッセージを表示しない</p>
+        <p>次のキリ番を予告</p>
+        <p>キリ番を踏んだ場合、Twitterでシェアするボタンを表示</p>
+        <div id="nostalgic-counter-sample12"></div>
+
+        <pre>
+          <code>
+            window.NostalgicCounter.showCounter("nostalgic-counter-sample12", counter.total);
+
+            window.NostalgicCounter.showKiriban("nostalgic-counter-sample12-kiriban", counter.total, {
+              normal_messages: [
+                {
+                  step: 10,
+                  message: '&lt;p&gt;{step} で割り切れるので、キリが良いよ！ &lt;a class="button button-blue" href="https://twitter.com/share?text={raw_count} 番目の訪問者でした！" target="_blank"&gt;&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; シェアする&lt;/a&gt;&lt;/p&gt;',
+                },
+                { step: 100, message: "&lt;p&gt;{step} で割り切れるので、すごくキリが良いよ！&lt;/p&gt;" },
+                { step: 1000, message: "&lt;p&gt;{step} で割り切れるので、めちゃくちゃキリが良いよ！&lt;/p&gt;" },
+                { step: 10000, message: "&lt;p&gt;{step} で割り切れるので、キリ良すぎ！&lt;/p&gt;" },
+              ],
+              special_messages: [
+                { count: 10, message: "&lt;p&gt;みんなありがとう&lt;/p&gt;" },
+                { count: 20, message: "&lt;p&gt;フン&lt;/p&gt;" },
+                { count: 30, message: "&lt;p&gt;神に感謝&lt;/p&gt;" },
+                { count: 40, message: "&lt;p&gt;くっ ボーボボに負けた…&lt;/p&gt;" },
+                { count: 50, message: "&lt;p&gt;順当な順位ですね&lt;/p&gt;" },
+                {
+                  count: 60,
+                  message: "&lt;p&gt;それではどうぞ。キユで「ロケットでつきぬけろ！」&lt;/p&gt;",
+                },
+                {
+                  count: 70,
+                  message: "&lt;p&gt;ここで次週予告！！来週はハルタのお母さん登場！！マザー・オブ・ラブでつきぬけろ！&lt;/p&gt;",
+                },
+                {
+                  count: 80,
+                  message: "&lt;p&gt;次週予告！！いよいよ赤城がベールを脱ぐ！！赤城の目的は！？ヒステリックにつきぬけろ！&lt;/p&gt;",
+                },
+                {
+                  count: 90,
+                  message: "&lt;p&gt;毎回この欄はボツを食う。けどそれは自分が大人でありコドモであるとゆう事の誇りだ&lt;/p&gt;",
+                },
+                {
+                  count: 100,
+                  message: "&lt;p&gt;痛みを知らない子供が嫌い。心をなくした大人が嫌い。優しい漫画が好き。バイバイ&lt;/p&gt;",
+                },
+                { count: 12345, message: "&lt;p&gt;{count} 回も来てくれて感謝。次は {next} を狙って。&lt;/p&gt;" },
+              ],
+              no_kiriban_message: "",
+              no_more_kiriban_message: "&lt;p&gt;もうキリ番はありません。&lt;/p&gt;",
+              next_kiriban_message: "&lt;p&gt;次のキリ番は {next} です。&lt;/p&gt;",
+            });
+          </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="section top_fore">
+      <div class="container">
+        <h2 class="section-heading dot-b">Contact</h2>
+        <p class="section-description">せっかくだから赤い連絡先を選ぶぜ。</p>
+        <p class="section-description">治せるバグなら治すよー。</p>
+        <div class="row">
+          <div class="one-half column contact">
+            <img class="u-max-full-width" src="../assets/image/twitter.png" />
+            <h5 class="contact-heading">
+              <a href="https://twitter.com/kako_jun_42">@kako_jun_42</a>
+            </h5>
+          </div>
+          <div class="one-half column contact">
+            <img class="u-max-full-width" src="../assets/image/github.png" />
+            <h5 class="contact-heading">
+              <a href="http://github.com/kako-jun">kako-jun</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="back-to-top" class="section">
+      <a href="#top">
+        <span class="dot">↑</span>
+        <p>Back to top</p>
+      </a>
+    </div>
+
+    <div id="side-back-to-top">
+      <a href="#top">
+        <span class="dot">↑</span>
+      </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kako-jun/nostalgic-counter@v1.0.2/dist/nostalgic-counter.min.js"></script>
+    <script src="../assets/js/my.js"></script>
+    <script src="../assets/js/nostalgic-counter-demo.js"></script>
+  </body>
+</html>

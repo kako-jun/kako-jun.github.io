@@ -778,3 +778,8 @@ td.strong {
 .pb-80 {
   padding-bottom: 80px !important;
 }
+
+pre > code {
+  text-align: left;
+  background: darkslategray;
+}
