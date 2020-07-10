@@ -461,13 +461,6 @@ td.strong {
   color: #fdfcf5;
 }
 
-.navi {
-  position: fixed;
-  top: 0;
-  z-index: 999;
-  margin-left: 8px;
-}
-
 #back-to-top {
   background: #322c28;
 }
@@ -489,6 +482,15 @@ td.strong {
   position: fixed;
   bottom: 8px;
   right: 8px;
+  z-index: 999;
+}
+
+#back-to-home {
+  font-size: 2rem;
+  position: fixed;
+  top: 0;
+  left: 8px;
+  z-index: 999;
 }
 
 .pc-table {
