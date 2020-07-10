@@ -15,14 +15,14 @@ window.onload = async () => {
     });
 
     window.NostalgicCounter.showCounter("nostalgic-counter-sample4", counter.total, {
-      image_dir_path: "pdy",
+      image_dir_path: "../assets/image/counter/pdy",
       image_ext: ".gif",
     });
 
     window.NostalgicCounter.showCounter("nostalgic-counter-sample5", counter.total, {
       format: "<p>{count}</p>",
       zero_padding_length: 8,
-      image_dir_path: "pdy",
+      image_dir_path: "../assets/image/counter/pdy",
       image_ext: ".gif",
     });
 
@@ -39,18 +39,20 @@ window.onload = async () => {
 
     window.NostalgicCounter.showCounter("nostalgic-counter-sample8", counter.this_month, {
       zero_padding_length: 4,
+      image_dir_path: "../assets/image/counter/led",
+      image_ext: ".gif",
     });
 
     window.NostalgicCounter.showCounter("nostalgic-counter-sample9", counter.last_month, {
-      image_dir_path: "pdy",
+      image_dir_path: "../assets/image/counter/led",
       image_ext: ".gif",
     });
 
     window.NostalgicCounter.showCounter("nostalgic-counter-sample10", counter.this_year, {
       format: "<p>{count}</p>",
       zero_padding_length: 4,
-      image_dir_path: "pdy",
-      image_ext: ".gif",
+      image_dir_path: "../assets/image/counter/mahjong",
+      image_ext: ".png",
     });
 
     window.NostalgicCounter.showCounter("nostalgic-counter-sample11", counter.last_year);
