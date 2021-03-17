@@ -6,6 +6,15 @@ body {
   padding: 0;
 }
 
+hr {
+  margin: 20px 0;
+  padding: 0;
+	border-top: 1px solid #111111;
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
 a {
   color: #f5e56b;
   text-decoration: none;
