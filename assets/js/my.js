@@ -1,10 +1,4 @@
 window.onload = async () => {
-  const scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 210,
-    speedAsDuration: true,
-    easing: "easeOutQuad",
-  });
-
   const counter = await window.NostalgicCounter.getCounter(
     "https://nostalgic-counter.llll-ll.com/api/counter?id=llll-ll&ex"
     // "http://localhost:42011/api/counter"
