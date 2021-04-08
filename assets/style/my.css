@@ -9,15 +9,19 @@ body {
 hr {
   margin: 20px 0;
   padding: 0;
-	border-top: 1px solid #111111;
-	border-bottom: 0;
-	border-left: 0;
-	border-right: 0;
+  border-top: 1px solid #111111;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 a {
   color: #f5e56b;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 ul {
@@ -59,18 +63,3 @@ ul {
 .with-shadow {
   box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.4);
 }
-
-/* .with-shadow::after {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(rgb(88, 195, 214), rgb(8, 42, 87));
-  filter: blur(20px);
-  transform: translateY(10px) scale(1.1);
-  mix-blend-mode: color-dodge;
-} */
